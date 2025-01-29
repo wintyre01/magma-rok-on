@@ -236,6 +236,10 @@ namespace MagmaRokOn
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TopLevelTabs = new System.Windows.Forms.TabControl();
             this.TabPageInformation = new System.Windows.Forms.TabPage();
+            this.chkPartial = new System.Windows.Forms.CheckBox();
+            this.picPartial = new System.Windows.Forms.PictureBox();
+            this.chkUnpitched = new System.Windows.Forms.CheckBox();
+            this.picUnpitched = new System.Windows.Forms.PictureBox();
             this.chkAuthorDTA = new System.Windows.Forms.CheckBox();
             this.chkDIYStems = new System.Windows.Forms.CheckBox();
             this.picDIYStems = new System.Windows.Forms.PictureBox();
@@ -646,13 +650,11 @@ namespace MagmaRokOn
             this.panel12 = new System.Windows.Forms.Panel();
             this.PlaybackTimer = new System.Windows.Forms.Timer(this.components);
             this.updater = new System.ComponentModel.BackgroundWorker();
-            this.chkUnpitched = new System.Windows.Forms.CheckBox();
-            this.picUnpitched = new System.Windows.Forms.PictureBox();
-            this.chkPartial = new System.Windows.Forms.CheckBox();
-            this.picPartial = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.TopLevelTabs.SuspendLayout();
             this.TabPageInformation.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picPartial)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picUnpitched)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picDIYStems)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCAT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAuthor)).BeginInit();
@@ -791,8 +793,6 @@ namespace MagmaRokOn
             this.panelTODO.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picUnpitched)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picPartial)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -1652,6 +1652,57 @@ namespace MagmaRokOn
             this.TabPageInformation.Text = "Information";
             this.TabPageInformation.DragDrop += new System.Windows.Forms.DragEventHandler(this.HandleDragDrop);
             this.TabPageInformation.DragEnter += new System.Windows.Forms.DragEventHandler(this.HandleDragEnter);
+            // 
+            // chkPartial
+            // 
+            this.chkPartial.AutoSize = true;
+            this.chkPartial.BackColor = System.Drawing.Color.Transparent;
+            this.chkPartial.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.chkPartial.Location = new System.Drawing.Point(170, 431);
+            this.chkPartial.Name = "chkPartial";
+            this.chkPartial.Size = new System.Drawing.Size(15, 14);
+            this.chkPartial.TabIndex = 147;
+            this.ToolTip.SetToolTip(this.chkPartial, "Click here if the song has partial multitracks");
+            this.chkPartial.UseVisualStyleBackColor = false;
+            this.chkPartial.CheckedChanged += new System.EventHandler(this.chkPartial_CheckedChanged);
+            // 
+            // picPartial
+            // 
+            this.picPartial.BackColor = System.Drawing.Color.Transparent;
+            this.picPartial.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picPartial.Location = new System.Drawing.Point(143, 376);
+            this.picPartial.Name = "picPartial";
+            this.picPartial.Size = new System.Drawing.Size(64, 54);
+            this.picPartial.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.picPartial.TabIndex = 148;
+            this.picPartial.TabStop = false;
+            this.ToolTip.SetToolTip(this.picPartial, "Click here if the song has partial multitracks");
+            // 
+            // chkUnpitched
+            // 
+            this.chkUnpitched.AutoSize = true;
+            this.chkUnpitched.BackColor = System.Drawing.Color.Transparent;
+            this.chkUnpitched.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.chkUnpitched.Location = new System.Drawing.Point(294, 506);
+            this.chkUnpitched.Name = "chkUnpitched";
+            this.chkUnpitched.Size = new System.Drawing.Size(15, 14);
+            this.chkUnpitched.TabIndex = 145;
+            this.ToolTip.SetToolTip(this.chkUnpitched, "Click here if the song only has unpitched vocals charted");
+            this.chkUnpitched.UseVisualStyleBackColor = false;
+            this.chkUnpitched.CheckedChanged += new System.EventHandler(this.chkUnpitched_CheckedChanged);
+            // 
+            // picUnpitched
+            // 
+            this.picUnpitched.BackColor = System.Drawing.Color.Transparent;
+            this.picUnpitched.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picUnpitched.Location = new System.Drawing.Point(269, 451);
+            this.picUnpitched.Name = "picUnpitched";
+            this.picUnpitched.Size = new System.Drawing.Size(64, 54);
+            this.picUnpitched.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.picUnpitched.TabIndex = 146;
+            this.picUnpitched.TabStop = false;
+            this.ToolTip.SetToolTip(this.picUnpitched, "Click here if the song only has unpitched vocals charted");
+            this.picUnpitched.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picUnpitched_MouseClick);
             // 
             // chkAuthorDTA
             // 
@@ -4546,6 +4597,10 @@ namespace MagmaRokOn
             this.ComboDrums.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ComboDrums.ForeColor = System.Drawing.Color.Black;
             this.ComboDrums.FormattingEnabled = true;
+            this.ComboDrums.Items.AddRange(new object[] {
+            "Kit",
+            "Kit & Kick",
+            "Kit, Kick & Snare"});
             this.ComboDrums.Location = new System.Drawing.Point(168, 33);
             this.ComboDrums.Name = "ComboDrums";
             this.ComboDrums.Size = new System.Drawing.Size(304, 21);
@@ -8244,57 +8299,6 @@ namespace MagmaRokOn
             this.updater.DoWork += new System.ComponentModel.DoWorkEventHandler(this.updater_DoWork);
             this.updater.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.updater_RunWorkerCompleted);
             // 
-            // chkUnpitched
-            // 
-            this.chkUnpitched.AutoSize = true;
-            this.chkUnpitched.BackColor = System.Drawing.Color.Transparent;
-            this.chkUnpitched.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.chkUnpitched.Location = new System.Drawing.Point(294, 506);
-            this.chkUnpitched.Name = "chkUnpitched";
-            this.chkUnpitched.Size = new System.Drawing.Size(15, 14);
-            this.chkUnpitched.TabIndex = 145;
-            this.ToolTip.SetToolTip(this.chkUnpitched, "Click here if the song only has unpitched vocals charted");
-            this.chkUnpitched.UseVisualStyleBackColor = false;
-            this.chkUnpitched.CheckedChanged += new System.EventHandler(this.chkUnpitched_CheckedChanged);
-            // 
-            // picUnpitched
-            // 
-            this.picUnpitched.BackColor = System.Drawing.Color.Transparent;
-            this.picUnpitched.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picUnpitched.Location = new System.Drawing.Point(269, 451);
-            this.picUnpitched.Name = "picUnpitched";
-            this.picUnpitched.Size = new System.Drawing.Size(64, 54);
-            this.picUnpitched.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.picUnpitched.TabIndex = 146;
-            this.picUnpitched.TabStop = false;
-            this.ToolTip.SetToolTip(this.picUnpitched, "Click here if the song only has unpitched vocals charted");
-            this.picUnpitched.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picUnpitched_MouseClick);
-            // 
-            // chkPartial
-            // 
-            this.chkPartial.AutoSize = true;
-            this.chkPartial.BackColor = System.Drawing.Color.Transparent;
-            this.chkPartial.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.chkPartial.Location = new System.Drawing.Point(170, 431);
-            this.chkPartial.Name = "chkPartial";
-            this.chkPartial.Size = new System.Drawing.Size(15, 14);
-            this.chkPartial.TabIndex = 147;
-            this.ToolTip.SetToolTip(this.chkPartial, "Click here if the song has partial multitracks");
-            this.chkPartial.UseVisualStyleBackColor = false;
-            this.chkPartial.CheckedChanged += new System.EventHandler(this.chkPartial_CheckedChanged);
-            // 
-            // picPartial
-            // 
-            this.picPartial.BackColor = System.Drawing.Color.Transparent;
-            this.picPartial.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picPartial.Location = new System.Drawing.Point(143, 376);
-            this.picPartial.Name = "picPartial";
-            this.picPartial.Size = new System.Drawing.Size(64, 54);
-            this.picPartial.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.picPartial.TabIndex = 148;
-            this.picPartial.TabStop = false;
-            this.ToolTip.SetToolTip(this.picPartial, "Click here if the song has partial multitracks");
-            // 
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -8329,6 +8333,8 @@ namespace MagmaRokOn
             this.TopLevelTabs.ResumeLayout(false);
             this.TabPageInformation.ResumeLayout(false);
             this.TabPageInformation.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picPartial)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picUnpitched)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picDIYStems)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCAT)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAuthor)).EndInit();
@@ -8476,8 +8482,6 @@ namespace MagmaRokOn
             this.panelTODO.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picUnpitched)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picPartial)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

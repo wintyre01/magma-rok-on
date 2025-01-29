@@ -252,9 +252,6 @@
     <None Include="Resources\magma_logo_sized.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Magma3Icon.ico" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\bg3.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -292,9 +289,6 @@
     <None Include="Resources\XK6.bin" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\c3logo.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\magma_logo_sized_colorful.png" />
   </ItemGroup>
   <ItemGroup>
@@ -317,9 +311,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\todo_fire.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\crypt.exe" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\difficulty_button_off.png" />
@@ -360,9 +351,11 @@
     <None Include="Resources\btn_small_lava.png" />
     <None Include="Resources\btn_large_lava.png" />
     <None Include="Resources\bg_onfire2.png" />
-    <None Include="Resources\bg_onfire.jpg" />
     <None Include="Resources\todo_onfire.png" />
     <None Include="Resources\magma_fire.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

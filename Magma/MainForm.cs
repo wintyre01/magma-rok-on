@@ -505,7 +505,8 @@ namespace MagmaRokOn
             mGenreSymbols = DataArrayUtl.GetSymbolListHeadings("ugc", "genres");
             mGenderSymbols = DataArrayUtl.GetSymbolListHeadings("ugc", "vocal_genders");
             mPercussionSymbols = DataArrayUtl.GetSymbolListHeadings("ugc", "vocal_percussion_types");
-            mDrumLayoutSymbols = DataArrayUtl.GetSymbolListHeadings("ugc", "drum_layouts");
+            //mDrumLayoutSymbols = DataArrayUtl.GetSymbolListHeadings("ugc", "drum_layouts");
+            mDrumLayoutSymbols = new string[3] { "drum_layout_kit", "drum_layout_kit_kick", "drum_layout_kit_kick_snare" };
             var files = new DirectoryInfo(Application.StartupPath + "\\themes\\").GetFiles("*.rbtheme");
             var strArray = new string[files.Length + 1];
             strArray[0] = "Default";
@@ -523,7 +524,7 @@ namespace MagmaRokOn
             ComboBoxGenre.DataSource = LocaleUtl.Localize(mGenreSymbols);
             ComboVocalGender.DataSource = LocaleUtl.Localize(mGenderSymbols);
             ComboVocalPercussion.DataSource = LocaleUtl.Localize(mPercussionSymbols);
-            ComboDrums.DataSource = LocaleUtl.Localize(mDrumLayoutSymbols);
+            //ComboDrums.DataSource = LocaleUtl.Localize(mDrumLayoutSymbols);
             NumericUpDownYear.Minimum = new Decimal(1000);
             NumericUpDownYear.Maximum = 2112;
             NumericUpDownYear.Value = DateTime.Now.Year;
@@ -1513,12 +1514,9 @@ namespace MagmaRokOn
             switch (ComboDrums.SelectedIndex)
             {
                 case 1:
-                    snare = true;
-                    break;
-                case 2:
                     kick = true;
                     break;
-                case 3:
+                case 2:
                     snare = true;
                     kick = true;
                     break;
@@ -6680,7 +6678,7 @@ namespace MagmaRokOn
         {
             WiiWarning = true;
             ComboDrums.SelectedIndex = 0;
-            EncodingQualityUpDown.SelectedItem = "03";
+            EncodingQualityUpDown.SelectedItem = "03 (default)";
             EncodingQuality = 3;
             if (!useUniqueNumericSongID.Checked && !string.IsNullOrEmpty(txtSongID.Text))
             {
@@ -6837,12 +6835,12 @@ namespace MagmaRokOn
                 TextBoxDrumKick.Text = drums1;
                 if (File.Exists(drums2) && File.Exists(drums3))
                 {
-                    ComboDrums.SelectedIndex = 3; //kick, snare, kit
+                    ComboDrums.SelectedIndex = 2; //kick, snare, kit
                     TextBoxDrumSnare.Text = drums2;
                 }
                 else if (File.Exists(drums2) && !File.Exists(drums3))
                 {
-                    ComboDrums.SelectedIndex = 2; //asume kick + kit
+                    ComboDrums.SelectedIndex = 1; //asume kick + kit
                     TextBoxDrumKit.Text = drums2;
                 }
                 if (File.Exists(drums3))
