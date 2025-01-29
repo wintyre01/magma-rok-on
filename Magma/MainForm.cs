@@ -75,7 +75,6 @@ namespace MagmaRokOn
         private readonly string BlankDryvox;
         private readonly string data_folder;
         private readonly string config_file;
-        private readonly string songcounter;
         
         public readonly string arguments;
         private const string DrumMix = "[mix # drums";
@@ -399,8 +398,7 @@ namespace MagmaRokOn
             SilenceStereo48_24 = Application.StartupPath + "\\audio\\stereo48_24.wav";
             BlankDryvox = Application.StartupPath + "\\audio\\blank_dryvox.wav";
 
-            config_file = Application.StartupPath + "\\bin\\main3.config";
-            songcounter = Application.StartupPath + "\\bin\\songcounterv2";
+            config_file = Application.StartupPath + "\\bin\\main4.config";
             
             ProjectFile = new ProjectFile();
             InitAllData();
@@ -4666,13 +4664,10 @@ namespace MagmaRokOn
            //make backups
            
            var backup_config = data_folder + Path.GetFileName(config_file);
-           var backup_counter = data_folder + Path.GetFileName(songcounter);
            try
            {
                Tools.DeleteFile(backup_config);
-               Tools.DeleteFile(backup_counter);
                File.Copy(config_file, backup_config);
-               File.Copy(songcounter, backup_counter);
            }
            catch (Exception)
            {}
@@ -8777,18 +8772,7 @@ namespace MagmaRokOn
             if (customSkinTool.Checked && SKIN_PATH != "")
             {
                 LoadCustomSkin(SKIN_PATH);
-            }
-            var backup_counter = data_folder + Path.GetFileName(songcounter);
-            if (!File.Exists(songcounter) && File.Exists(backup_counter))
-            {
-                if (MessageBox.Show("It looks like you don't have a song counter file in the /bin folder, but I found a backup. Do you want me to " +
-                                    "restore that?\n\n[RECOMMENDED]\nClick Yes to restore and continue from the last numeric ID you used\n\n" +
-                                    "[NOT RECOMMENDED]\nClick No to ignore and start over - LIKELY TO CAUSE ID CONFLICTS!",mAppTitle, MessageBoxButtons.YesNo, 
-                                    MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    File.Copy(backup_counter, songcounter);
-                }
-            }
+            }            
             
             updater.RunWorkerAsync();
             var xmasfile = Application.StartupPath + "\\bin\\DO_NOT_OPEN_TIL_XMAS.rok";
@@ -9730,7 +9714,7 @@ namespace MagmaRokOn
         {
             doUseNumericID(useUniqueNumericSongID.Checked);
             RefreshWindowTitle();
-            if (!useUniqueNumericSongID.Checked || File.Exists(songcounter)) return;
+            if (!useUniqueNumericSongID.Checked) return;
             optionsToolStripMenuItem.HideDropDown();
         }
 
