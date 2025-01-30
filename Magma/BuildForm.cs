@@ -118,7 +118,7 @@ namespace MagmaRokOn
                 var kv = new RSAParams(Application.StartupPath + "\\bin\\KV.bin");
                 if (!kv.Valid)
                 {
-                    Log("ERROR: KV.bin must be in the \bin subdirectory.");
+                    Log("ERROR: KV.bin must be in the \\bin subdirectory.");
                 }
                 else
                 {
@@ -705,7 +705,7 @@ namespace MagmaRokOn
 
                                 if (mMainForm.HasProGuitar && mMainForm.ProGuitarDiff != 0)
                                 {
-                                    line = line.Replace("0", mMainForm.ProGuitarDiff.ToString(CultureInfo.InvariantCulture));
+                                    line = line.Replace("0", mMainForm.difficultyProGuitar.ToString(CultureInfo.InvariantCulture));//mMainForm.ProGuitarDiff.ToString(CultureInfo.InvariantCulture));
                                 }
                                 else
                                 {
@@ -755,6 +755,24 @@ namespace MagmaRokOn
                                 swSongsDta.WriteLine("   ('crowd_channels' " + (channels.Count() - 2) + " " + (channels.Count() - 1) + ")");
                                 line = "";
                             }
+                            else if (line.Contains("'rank'"))
+                            {
+                                swSongsDta.WriteLine(line);
+                                srSongsRaw.ReadLine();
+                                swSongsDta.WriteLine("('drum' " + mMainForm.difficultyDrums + ")");
+                                srSongsRaw.ReadLine();
+                                swSongsDta.WriteLine("('guitar' " + mMainForm.difficultyGuitar + ")");
+                                srSongsRaw.ReadLine();
+                                swSongsDta.WriteLine("('bass' " + mMainForm.difficultyBass + ")");
+                                srSongsRaw.ReadLine();
+                                swSongsDta.WriteLine("('vocals' " + mMainForm.difficultyVocals + ")");
+                                srSongsRaw.ReadLine();
+                                swSongsDta.WriteLine("('keys' " + mMainForm.difficultyKeys + ")");
+                                srSongsRaw.ReadLine();
+                                swSongsDta.WriteLine("('real_keys' " + mMainForm.difficultyProKeys + ")");
+                                srSongsRaw.ReadLine();
+                                swSongsDta.WriteLine("('band' " + mMainForm.difficultyBand + ")");
+                            }
                             else if (line.Contains("encoding"))
                             {
                                 swSongsDta.WriteLine("(band_fail_cue " + mMainForm.bandFailText + ")");
@@ -768,7 +786,7 @@ namespace MagmaRokOn
                                 
                                 if (mMainForm.HasProBass && mMainForm.ProBassDiff != 0)
                                 {
-                                    line = line.Replace("0", mMainForm.ProBassDiff.ToString(CultureInfo.InvariantCulture));
+                                    line = line.Replace("0", mMainForm.difficultyProBass.ToString(CultureInfo.InvariantCulture));//mMainForm.ProBassDiff.ToString(CultureInfo.InvariantCulture));
                                 }
                                 else
                                 {

@@ -650,6 +650,24 @@ namespace MagmaRokOn
             this.panel12 = new System.Windows.Forms.Panel();
             this.PlaybackTimer = new System.Windows.Forms.Timer(this.components);
             this.updater = new System.ComponentModel.BackgroundWorker();
+            this.scrollDrums = new System.Windows.Forms.HScrollBar();
+            this.lblDrumsDiff = new System.Windows.Forms.Label();
+            this.scrollBass = new System.Windows.Forms.HScrollBar();
+            this.lblBassDiff = new System.Windows.Forms.Label();
+            this.scrollProBass = new System.Windows.Forms.HScrollBar();
+            this.lblProBassDiff = new System.Windows.Forms.Label();
+            this.scrollGuitar = new System.Windows.Forms.HScrollBar();
+            this.lblGuitarDiff = new System.Windows.Forms.Label();
+            this.scrollProGuitar = new System.Windows.Forms.HScrollBar();
+            this.lblProGuitarDiff = new System.Windows.Forms.Label();
+            this.scrollVocals = new System.Windows.Forms.HScrollBar();
+            this.lblVocalsDiff = new System.Windows.Forms.Label();
+            this.scrollKeys = new System.Windows.Forms.HScrollBar();
+            this.lblKeysDiff = new System.Windows.Forms.Label();
+            this.scrollProKeys = new System.Windows.Forms.HScrollBar();
+            this.lblProKeysDiff = new System.Windows.Forms.Label();
+            this.scrollBand = new System.Windows.Forms.HScrollBar();
+            this.lblBandDiff = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.TopLevelTabs.SuspendLayout();
             this.TabPageInformation.SuspendLayout();
@@ -6291,6 +6309,24 @@ namespace MagmaRokOn
             // GroupBoxDifficulty
             // 
             this.GroupBoxDifficulty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.GroupBoxDifficulty.Controls.Add(this.lblBandDiff);
+            this.GroupBoxDifficulty.Controls.Add(this.scrollBand);
+            this.GroupBoxDifficulty.Controls.Add(this.lblProKeysDiff);
+            this.GroupBoxDifficulty.Controls.Add(this.scrollProKeys);
+            this.GroupBoxDifficulty.Controls.Add(this.lblKeysDiff);
+            this.GroupBoxDifficulty.Controls.Add(this.scrollKeys);
+            this.GroupBoxDifficulty.Controls.Add(this.lblVocalsDiff);
+            this.GroupBoxDifficulty.Controls.Add(this.scrollVocals);
+            this.GroupBoxDifficulty.Controls.Add(this.lblProGuitarDiff);
+            this.GroupBoxDifficulty.Controls.Add(this.scrollProGuitar);
+            this.GroupBoxDifficulty.Controls.Add(this.lblGuitarDiff);
+            this.GroupBoxDifficulty.Controls.Add(this.scrollGuitar);
+            this.GroupBoxDifficulty.Controls.Add(this.lblProBassDiff);
+            this.GroupBoxDifficulty.Controls.Add(this.scrollProBass);
+            this.GroupBoxDifficulty.Controls.Add(this.lblBassDiff);
+            this.GroupBoxDifficulty.Controls.Add(this.scrollBass);
+            this.GroupBoxDifficulty.Controls.Add(this.lblDrumsDiff);
+            this.GroupBoxDifficulty.Controls.Add(this.scrollDrums);
             this.GroupBoxDifficulty.Controls.Add(this.PictureBandDifficulty6);
             this.GroupBoxDifficulty.Controls.Add(this.PictureProKeysDifficulty6);
             this.GroupBoxDifficulty.Controls.Add(this.PictureBandDifficulty5);
@@ -6368,16 +6404,16 @@ namespace MagmaRokOn
             this.GroupBoxDifficulty.Controls.Add(this.LabelBandDifficulty);
             this.GroupBoxDifficulty.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBoxDifficulty.ForeColor = System.Drawing.Color.White;
-            this.GroupBoxDifficulty.Location = new System.Drawing.Point(509, 81);
+            this.GroupBoxDifficulty.Location = new System.Drawing.Point(472, 77);
             this.GroupBoxDifficulty.Name = "GroupBoxDifficulty";
-            this.GroupBoxDifficulty.Size = new System.Drawing.Size(223, 349);
+            this.GroupBoxDifficulty.Size = new System.Drawing.Size(260, 357);
             this.GroupBoxDifficulty.TabIndex = 29;
             this.GroupBoxDifficulty.TabStop = false;
             this.GroupBoxDifficulty.Text = "Difficulty";
             // 
             // PictureBandDifficulty6
             // 
-            this.PictureBandDifficulty6.Location = new System.Drawing.Point(178, 310);
+            this.PictureBandDifficulty6.Location = new System.Drawing.Point(178, 315);
             this.PictureBandDifficulty6.Name = "PictureBandDifficulty6";
             this.PictureBandDifficulty6.Size = new System.Drawing.Size(14, 13);
             this.PictureBandDifficulty6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -6391,7 +6427,7 @@ namespace MagmaRokOn
             // PictureProKeysDifficulty6
             // 
             this.PictureProKeysDifficulty6.Enabled = false;
-            this.PictureProKeysDifficulty6.Location = new System.Drawing.Point(178, 276);
+            this.PictureProKeysDifficulty6.Location = new System.Drawing.Point(178, 278);
             this.PictureProKeysDifficulty6.Name = "PictureProKeysDifficulty6";
             this.PictureProKeysDifficulty6.Size = new System.Drawing.Size(14, 13);
             this.PictureProKeysDifficulty6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -6404,7 +6440,7 @@ namespace MagmaRokOn
             // 
             // PictureBandDifficulty5
             // 
-            this.PictureBandDifficulty5.Location = new System.Drawing.Point(164, 310);
+            this.PictureBandDifficulty5.Location = new System.Drawing.Point(164, 315);
             this.PictureBandDifficulty5.Name = "PictureBandDifficulty5";
             this.PictureBandDifficulty5.Size = new System.Drawing.Size(14, 13);
             this.PictureBandDifficulty5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -6418,7 +6454,7 @@ namespace MagmaRokOn
             // PictureKeysDifficulty6
             // 
             this.PictureKeysDifficulty6.Enabled = false;
-            this.PictureKeysDifficulty6.Location = new System.Drawing.Point(178, 243);
+            this.PictureKeysDifficulty6.Location = new System.Drawing.Point(178, 240);
             this.PictureKeysDifficulty6.Name = "PictureKeysDifficulty6";
             this.PictureKeysDifficulty6.Size = new System.Drawing.Size(14, 13);
             this.PictureKeysDifficulty6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -6431,7 +6467,7 @@ namespace MagmaRokOn
             // 
             // PictureBandDifficulty4
             // 
-            this.PictureBandDifficulty4.Location = new System.Drawing.Point(150, 310);
+            this.PictureBandDifficulty4.Location = new System.Drawing.Point(150, 315);
             this.PictureBandDifficulty4.Name = "PictureBandDifficulty4";
             this.PictureBandDifficulty4.Size = new System.Drawing.Size(14, 13);
             this.PictureBandDifficulty4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -6445,7 +6481,7 @@ namespace MagmaRokOn
             // PictureProKeysDifficulty5
             // 
             this.PictureProKeysDifficulty5.Enabled = false;
-            this.PictureProKeysDifficulty5.Location = new System.Drawing.Point(164, 276);
+            this.PictureProKeysDifficulty5.Location = new System.Drawing.Point(164, 278);
             this.PictureProKeysDifficulty5.Name = "PictureProKeysDifficulty5";
             this.PictureProKeysDifficulty5.Size = new System.Drawing.Size(14, 13);
             this.PictureProKeysDifficulty5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -6458,7 +6494,7 @@ namespace MagmaRokOn
             // 
             // PictureBandDifficulty3
             // 
-            this.PictureBandDifficulty3.Location = new System.Drawing.Point(136, 310);
+            this.PictureBandDifficulty3.Location = new System.Drawing.Point(136, 315);
             this.PictureBandDifficulty3.Name = "PictureBandDifficulty3";
             this.PictureBandDifficulty3.Size = new System.Drawing.Size(14, 13);
             this.PictureBandDifficulty3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -6472,7 +6508,7 @@ namespace MagmaRokOn
             // PictureProKeysDifficulty4
             // 
             this.PictureProKeysDifficulty4.Enabled = false;
-            this.PictureProKeysDifficulty4.Location = new System.Drawing.Point(150, 276);
+            this.PictureProKeysDifficulty4.Location = new System.Drawing.Point(150, 278);
             this.PictureProKeysDifficulty4.Name = "PictureProKeysDifficulty4";
             this.PictureProKeysDifficulty4.Size = new System.Drawing.Size(14, 13);
             this.PictureProKeysDifficulty4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -6485,7 +6521,7 @@ namespace MagmaRokOn
             // 
             // PictureBandDifficulty2
             // 
-            this.PictureBandDifficulty2.Location = new System.Drawing.Point(122, 310);
+            this.PictureBandDifficulty2.Location = new System.Drawing.Point(122, 315);
             this.PictureBandDifficulty2.Name = "PictureBandDifficulty2";
             this.PictureBandDifficulty2.Size = new System.Drawing.Size(14, 13);
             this.PictureBandDifficulty2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -6498,7 +6534,7 @@ namespace MagmaRokOn
             // 
             // PictureBandDifficulty7
             // 
-            this.PictureBandDifficulty7.Location = new System.Drawing.Point(196, 310);
+            this.PictureBandDifficulty7.Location = new System.Drawing.Point(196, 315);
             this.PictureBandDifficulty7.Name = "PictureBandDifficulty7";
             this.PictureBandDifficulty7.Size = new System.Drawing.Size(13, 13);
             this.PictureBandDifficulty7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -6512,7 +6548,7 @@ namespace MagmaRokOn
             // PictureKeysDifficulty5
             // 
             this.PictureKeysDifficulty5.Enabled = false;
-            this.PictureKeysDifficulty5.Location = new System.Drawing.Point(164, 243);
+            this.PictureKeysDifficulty5.Location = new System.Drawing.Point(164, 240);
             this.PictureKeysDifficulty5.Name = "PictureKeysDifficulty5";
             this.PictureKeysDifficulty5.Size = new System.Drawing.Size(14, 13);
             this.PictureKeysDifficulty5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -6525,7 +6561,7 @@ namespace MagmaRokOn
             // 
             // PictureBandDifficulty1
             // 
-            this.PictureBandDifficulty1.Location = new System.Drawing.Point(104, 310);
+            this.PictureBandDifficulty1.Location = new System.Drawing.Point(104, 315);
             this.PictureBandDifficulty1.Name = "PictureBandDifficulty1";
             this.PictureBandDifficulty1.Size = new System.Drawing.Size(14, 13);
             this.PictureBandDifficulty1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -6539,7 +6575,7 @@ namespace MagmaRokOn
             // PictureProKeysDifficulty3
             // 
             this.PictureProKeysDifficulty3.Enabled = false;
-            this.PictureProKeysDifficulty3.Location = new System.Drawing.Point(136, 276);
+            this.PictureProKeysDifficulty3.Location = new System.Drawing.Point(136, 278);
             this.PictureProKeysDifficulty3.Name = "PictureProKeysDifficulty3";
             this.PictureProKeysDifficulty3.Size = new System.Drawing.Size(14, 13);
             this.PictureProKeysDifficulty3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -6553,7 +6589,7 @@ namespace MagmaRokOn
             // PictureVocalDifficulty6
             // 
             this.PictureVocalDifficulty6.Enabled = false;
-            this.PictureVocalDifficulty6.Location = new System.Drawing.Point(178, 206);
+            this.PictureVocalDifficulty6.Location = new System.Drawing.Point(178, 203);
             this.PictureVocalDifficulty6.Name = "PictureVocalDifficulty6";
             this.PictureVocalDifficulty6.Size = new System.Drawing.Size(14, 13);
             this.PictureVocalDifficulty6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -6567,7 +6603,7 @@ namespace MagmaRokOn
             // PictureProKeysDifficulty2
             // 
             this.PictureProKeysDifficulty2.Enabled = false;
-            this.PictureProKeysDifficulty2.Location = new System.Drawing.Point(122, 276);
+            this.PictureProKeysDifficulty2.Location = new System.Drawing.Point(122, 278);
             this.PictureProKeysDifficulty2.Name = "PictureProKeysDifficulty2";
             this.PictureProKeysDifficulty2.Size = new System.Drawing.Size(14, 13);
             this.PictureProKeysDifficulty2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -6581,7 +6617,7 @@ namespace MagmaRokOn
             // PictureKeysDifficulty4
             // 
             this.PictureKeysDifficulty4.Enabled = false;
-            this.PictureKeysDifficulty4.Location = new System.Drawing.Point(150, 243);
+            this.PictureKeysDifficulty4.Location = new System.Drawing.Point(150, 240);
             this.PictureKeysDifficulty4.Name = "PictureKeysDifficulty4";
             this.PictureKeysDifficulty4.Size = new System.Drawing.Size(14, 13);
             this.PictureKeysDifficulty4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -6595,7 +6631,7 @@ namespace MagmaRokOn
             // PictureProKeysDifficulty7
             // 
             this.PictureProKeysDifficulty7.Enabled = false;
-            this.PictureProKeysDifficulty7.Location = new System.Drawing.Point(196, 276);
+            this.PictureProKeysDifficulty7.Location = new System.Drawing.Point(196, 278);
             this.PictureProKeysDifficulty7.Name = "PictureProKeysDifficulty7";
             this.PictureProKeysDifficulty7.Size = new System.Drawing.Size(13, 13);
             this.PictureProKeysDifficulty7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -6609,7 +6645,7 @@ namespace MagmaRokOn
             // PictureVocalDifficulty5
             // 
             this.PictureVocalDifficulty5.Enabled = false;
-            this.PictureVocalDifficulty5.Location = new System.Drawing.Point(164, 206);
+            this.PictureVocalDifficulty5.Location = new System.Drawing.Point(164, 203);
             this.PictureVocalDifficulty5.Name = "PictureVocalDifficulty5";
             this.PictureVocalDifficulty5.Size = new System.Drawing.Size(14, 13);
             this.PictureVocalDifficulty5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -6623,7 +6659,7 @@ namespace MagmaRokOn
             // PictureProKeysDifficulty1
             // 
             this.PictureProKeysDifficulty1.Enabled = false;
-            this.PictureProKeysDifficulty1.Location = new System.Drawing.Point(104, 276);
+            this.PictureProKeysDifficulty1.Location = new System.Drawing.Point(104, 278);
             this.PictureProKeysDifficulty1.Name = "PictureProKeysDifficulty1";
             this.PictureProKeysDifficulty1.Size = new System.Drawing.Size(14, 13);
             this.PictureProKeysDifficulty1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -6637,7 +6673,7 @@ namespace MagmaRokOn
             // PictureKeysDifficulty3
             // 
             this.PictureKeysDifficulty3.Enabled = false;
-            this.PictureKeysDifficulty3.Location = new System.Drawing.Point(136, 243);
+            this.PictureKeysDifficulty3.Location = new System.Drawing.Point(136, 240);
             this.PictureKeysDifficulty3.Name = "PictureKeysDifficulty3";
             this.PictureKeysDifficulty3.Size = new System.Drawing.Size(14, 13);
             this.PictureKeysDifficulty3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -6651,7 +6687,7 @@ namespace MagmaRokOn
             // PictureProGuitarDifficulty6
             // 
             this.PictureProGuitarDifficulty6.Enabled = false;
-            this.PictureProGuitarDifficulty6.Location = new System.Drawing.Point(178, 171);
+            this.PictureProGuitarDifficulty6.Location = new System.Drawing.Point(178, 166);
             this.PictureProGuitarDifficulty6.Name = "PictureProGuitarDifficulty6";
             this.PictureProGuitarDifficulty6.Size = new System.Drawing.Size(14, 13);
             this.PictureProGuitarDifficulty6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -6665,7 +6701,7 @@ namespace MagmaRokOn
             // PictureKeysDifficulty2
             // 
             this.PictureKeysDifficulty2.Enabled = false;
-            this.PictureKeysDifficulty2.Location = new System.Drawing.Point(122, 243);
+            this.PictureKeysDifficulty2.Location = new System.Drawing.Point(122, 240);
             this.PictureKeysDifficulty2.Name = "PictureKeysDifficulty2";
             this.PictureKeysDifficulty2.Size = new System.Drawing.Size(14, 13);
             this.PictureKeysDifficulty2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -6679,7 +6715,7 @@ namespace MagmaRokOn
             // PictureVocalDifficulty4
             // 
             this.PictureVocalDifficulty4.Enabled = false;
-            this.PictureVocalDifficulty4.Location = new System.Drawing.Point(150, 206);
+            this.PictureVocalDifficulty4.Location = new System.Drawing.Point(150, 203);
             this.PictureVocalDifficulty4.Name = "PictureVocalDifficulty4";
             this.PictureVocalDifficulty4.Size = new System.Drawing.Size(14, 13);
             this.PictureVocalDifficulty4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -6693,7 +6729,7 @@ namespace MagmaRokOn
             // PictureKeysDifficulty7
             // 
             this.PictureKeysDifficulty7.Enabled = false;
-            this.PictureKeysDifficulty7.Location = new System.Drawing.Point(196, 243);
+            this.PictureKeysDifficulty7.Location = new System.Drawing.Point(196, 240);
             this.PictureKeysDifficulty7.Name = "PictureKeysDifficulty7";
             this.PictureKeysDifficulty7.Size = new System.Drawing.Size(13, 13);
             this.PictureKeysDifficulty7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -6707,7 +6743,7 @@ namespace MagmaRokOn
             // PictureGuitarDifficulty6
             // 
             this.PictureGuitarDifficulty6.Enabled = false;
-            this.PictureGuitarDifficulty6.Location = new System.Drawing.Point(178, 136);
+            this.PictureGuitarDifficulty6.Location = new System.Drawing.Point(178, 129);
             this.PictureGuitarDifficulty6.Name = "PictureGuitarDifficulty6";
             this.PictureGuitarDifficulty6.Size = new System.Drawing.Size(14, 13);
             this.PictureGuitarDifficulty6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -6721,7 +6757,7 @@ namespace MagmaRokOn
             // PictureKeysDifficulty1
             // 
             this.PictureKeysDifficulty1.Enabled = false;
-            this.PictureKeysDifficulty1.Location = new System.Drawing.Point(104, 243);
+            this.PictureKeysDifficulty1.Location = new System.Drawing.Point(104, 240);
             this.PictureKeysDifficulty1.Name = "PictureKeysDifficulty1";
             this.PictureKeysDifficulty1.Size = new System.Drawing.Size(14, 13);
             this.PictureKeysDifficulty1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -6735,7 +6771,7 @@ namespace MagmaRokOn
             // PictureVocalDifficulty3
             // 
             this.PictureVocalDifficulty3.Enabled = false;
-            this.PictureVocalDifficulty3.Location = new System.Drawing.Point(136, 206);
+            this.PictureVocalDifficulty3.Location = new System.Drawing.Point(136, 203);
             this.PictureVocalDifficulty3.Name = "PictureVocalDifficulty3";
             this.PictureVocalDifficulty3.Size = new System.Drawing.Size(14, 13);
             this.PictureVocalDifficulty3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -6749,7 +6785,7 @@ namespace MagmaRokOn
             // PictureProGuitarDifficulty5
             // 
             this.PictureProGuitarDifficulty5.Enabled = false;
-            this.PictureProGuitarDifficulty5.Location = new System.Drawing.Point(164, 171);
+            this.PictureProGuitarDifficulty5.Location = new System.Drawing.Point(164, 166);
             this.PictureProGuitarDifficulty5.Name = "PictureProGuitarDifficulty5";
             this.PictureProGuitarDifficulty5.Size = new System.Drawing.Size(14, 13);
             this.PictureProGuitarDifficulty5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -6763,7 +6799,7 @@ namespace MagmaRokOn
             // PictureVocalDifficulty2
             // 
             this.PictureVocalDifficulty2.Enabled = false;
-            this.PictureVocalDifficulty2.Location = new System.Drawing.Point(122, 206);
+            this.PictureVocalDifficulty2.Location = new System.Drawing.Point(122, 203);
             this.PictureVocalDifficulty2.Name = "PictureVocalDifficulty2";
             this.PictureVocalDifficulty2.Size = new System.Drawing.Size(14, 13);
             this.PictureVocalDifficulty2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -6777,7 +6813,7 @@ namespace MagmaRokOn
             // PictureProBassDifficulty6
             // 
             this.PictureProBassDifficulty6.Enabled = false;
-            this.PictureProBassDifficulty6.Location = new System.Drawing.Point(178, 101);
+            this.PictureProBassDifficulty6.Location = new System.Drawing.Point(178, 92);
             this.PictureProBassDifficulty6.Name = "PictureProBassDifficulty6";
             this.PictureProBassDifficulty6.Size = new System.Drawing.Size(14, 13);
             this.PictureProBassDifficulty6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -6791,7 +6827,7 @@ namespace MagmaRokOn
             // PictureVocalDifficulty7
             // 
             this.PictureVocalDifficulty7.Enabled = false;
-            this.PictureVocalDifficulty7.Location = new System.Drawing.Point(196, 206);
+            this.PictureVocalDifficulty7.Location = new System.Drawing.Point(196, 203);
             this.PictureVocalDifficulty7.Name = "PictureVocalDifficulty7";
             this.PictureVocalDifficulty7.Size = new System.Drawing.Size(13, 13);
             this.PictureVocalDifficulty7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -6805,7 +6841,7 @@ namespace MagmaRokOn
             // PictureProGuitarDifficulty4
             // 
             this.PictureProGuitarDifficulty4.Enabled = false;
-            this.PictureProGuitarDifficulty4.Location = new System.Drawing.Point(150, 171);
+            this.PictureProGuitarDifficulty4.Location = new System.Drawing.Point(150, 166);
             this.PictureProGuitarDifficulty4.Name = "PictureProGuitarDifficulty4";
             this.PictureProGuitarDifficulty4.Size = new System.Drawing.Size(14, 13);
             this.PictureProGuitarDifficulty4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -6819,7 +6855,7 @@ namespace MagmaRokOn
             // PictureVocalDifficulty1
             // 
             this.PictureVocalDifficulty1.Enabled = false;
-            this.PictureVocalDifficulty1.Location = new System.Drawing.Point(104, 206);
+            this.PictureVocalDifficulty1.Location = new System.Drawing.Point(104, 203);
             this.PictureVocalDifficulty1.Name = "PictureVocalDifficulty1";
             this.PictureVocalDifficulty1.Size = new System.Drawing.Size(14, 13);
             this.PictureVocalDifficulty1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -6833,7 +6869,7 @@ namespace MagmaRokOn
             // PictureGuitarDifficulty5
             // 
             this.PictureGuitarDifficulty5.Enabled = false;
-            this.PictureGuitarDifficulty5.Location = new System.Drawing.Point(164, 136);
+            this.PictureGuitarDifficulty5.Location = new System.Drawing.Point(164, 129);
             this.PictureGuitarDifficulty5.Name = "PictureGuitarDifficulty5";
             this.PictureGuitarDifficulty5.Size = new System.Drawing.Size(14, 13);
             this.PictureGuitarDifficulty5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -6847,7 +6883,7 @@ namespace MagmaRokOn
             // PictureProGuitarDifficulty3
             // 
             this.PictureProGuitarDifficulty3.Enabled = false;
-            this.PictureProGuitarDifficulty3.Location = new System.Drawing.Point(136, 171);
+            this.PictureProGuitarDifficulty3.Location = new System.Drawing.Point(136, 166);
             this.PictureProGuitarDifficulty3.Name = "PictureProGuitarDifficulty3";
             this.PictureProGuitarDifficulty3.Size = new System.Drawing.Size(14, 13);
             this.PictureProGuitarDifficulty3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -6861,7 +6897,7 @@ namespace MagmaRokOn
             // PictureProBassDifficulty5
             // 
             this.PictureProBassDifficulty5.Enabled = false;
-            this.PictureProBassDifficulty5.Location = new System.Drawing.Point(164, 101);
+            this.PictureProBassDifficulty5.Location = new System.Drawing.Point(164, 92);
             this.PictureProBassDifficulty5.Name = "PictureProBassDifficulty5";
             this.PictureProBassDifficulty5.Size = new System.Drawing.Size(14, 13);
             this.PictureProBassDifficulty5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -6875,7 +6911,7 @@ namespace MagmaRokOn
             // PictureProGuitarDifficulty2
             // 
             this.PictureProGuitarDifficulty2.Enabled = false;
-            this.PictureProGuitarDifficulty2.Location = new System.Drawing.Point(122, 171);
+            this.PictureProGuitarDifficulty2.Location = new System.Drawing.Point(122, 166);
             this.PictureProGuitarDifficulty2.Name = "PictureProGuitarDifficulty2";
             this.PictureProGuitarDifficulty2.Size = new System.Drawing.Size(14, 13);
             this.PictureProGuitarDifficulty2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -6889,7 +6925,7 @@ namespace MagmaRokOn
             // PictureGuitarDifficulty4
             // 
             this.PictureGuitarDifficulty4.Enabled = false;
-            this.PictureGuitarDifficulty4.Location = new System.Drawing.Point(150, 136);
+            this.PictureGuitarDifficulty4.Location = new System.Drawing.Point(150, 129);
             this.PictureGuitarDifficulty4.Name = "PictureGuitarDifficulty4";
             this.PictureGuitarDifficulty4.Size = new System.Drawing.Size(14, 13);
             this.PictureGuitarDifficulty4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -6903,7 +6939,7 @@ namespace MagmaRokOn
             // PictureProGuitarDifficulty7
             // 
             this.PictureProGuitarDifficulty7.Enabled = false;
-            this.PictureProGuitarDifficulty7.Location = new System.Drawing.Point(196, 171);
+            this.PictureProGuitarDifficulty7.Location = new System.Drawing.Point(196, 166);
             this.PictureProGuitarDifficulty7.Name = "PictureProGuitarDifficulty7";
             this.PictureProGuitarDifficulty7.Size = new System.Drawing.Size(13, 13);
             this.PictureProGuitarDifficulty7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -6917,7 +6953,7 @@ namespace MagmaRokOn
             // PictureProGuitarDifficulty1
             // 
             this.PictureProGuitarDifficulty1.Enabled = false;
-            this.PictureProGuitarDifficulty1.Location = new System.Drawing.Point(104, 171);
+            this.PictureProGuitarDifficulty1.Location = new System.Drawing.Point(104, 166);
             this.PictureProGuitarDifficulty1.Name = "PictureProGuitarDifficulty1";
             this.PictureProGuitarDifficulty1.Size = new System.Drawing.Size(14, 13);
             this.PictureProGuitarDifficulty1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -6931,7 +6967,7 @@ namespace MagmaRokOn
             // PictureBassDifficulty6
             // 
             this.PictureBassDifficulty6.Enabled = false;
-            this.PictureBassDifficulty6.Location = new System.Drawing.Point(178, 66);
+            this.PictureBassDifficulty6.Location = new System.Drawing.Point(178, 55);
             this.PictureBassDifficulty6.Name = "PictureBassDifficulty6";
             this.PictureBassDifficulty6.Size = new System.Drawing.Size(14, 13);
             this.PictureBassDifficulty6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -6945,7 +6981,7 @@ namespace MagmaRokOn
             // PictureGuitarDifficulty3
             // 
             this.PictureGuitarDifficulty3.Enabled = false;
-            this.PictureGuitarDifficulty3.Location = new System.Drawing.Point(136, 136);
+            this.PictureGuitarDifficulty3.Location = new System.Drawing.Point(136, 129);
             this.PictureGuitarDifficulty3.Name = "PictureGuitarDifficulty3";
             this.PictureGuitarDifficulty3.Size = new System.Drawing.Size(14, 13);
             this.PictureGuitarDifficulty3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -6959,7 +6995,7 @@ namespace MagmaRokOn
             // PictureProBassDifficulty4
             // 
             this.PictureProBassDifficulty4.Enabled = false;
-            this.PictureProBassDifficulty4.Location = new System.Drawing.Point(150, 101);
+            this.PictureProBassDifficulty4.Location = new System.Drawing.Point(150, 92);
             this.PictureProBassDifficulty4.Name = "PictureProBassDifficulty4";
             this.PictureProBassDifficulty4.Size = new System.Drawing.Size(14, 13);
             this.PictureProBassDifficulty4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -6973,7 +7009,7 @@ namespace MagmaRokOn
             // PictureGuitarDifficulty2
             // 
             this.PictureGuitarDifficulty2.Enabled = false;
-            this.PictureGuitarDifficulty2.Location = new System.Drawing.Point(122, 136);
+            this.PictureGuitarDifficulty2.Location = new System.Drawing.Point(122, 129);
             this.PictureGuitarDifficulty2.Name = "PictureGuitarDifficulty2";
             this.PictureGuitarDifficulty2.Size = new System.Drawing.Size(14, 13);
             this.PictureGuitarDifficulty2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -6988,7 +7024,7 @@ namespace MagmaRokOn
             // 
             this.PictureDrumDifficulty6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureDrumDifficulty6.Enabled = false;
-            this.PictureDrumDifficulty6.Location = new System.Drawing.Point(178, 35);
+            this.PictureDrumDifficulty6.Location = new System.Drawing.Point(178, 17);
             this.PictureDrumDifficulty6.Name = "PictureDrumDifficulty6";
             this.PictureDrumDifficulty6.Size = new System.Drawing.Size(14, 13);
             this.PictureDrumDifficulty6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -7002,7 +7038,7 @@ namespace MagmaRokOn
             // PictureGuitarDifficulty7
             // 
             this.PictureGuitarDifficulty7.Enabled = false;
-            this.PictureGuitarDifficulty7.Location = new System.Drawing.Point(196, 136);
+            this.PictureGuitarDifficulty7.Location = new System.Drawing.Point(196, 129);
             this.PictureGuitarDifficulty7.Name = "PictureGuitarDifficulty7";
             this.PictureGuitarDifficulty7.Size = new System.Drawing.Size(13, 13);
             this.PictureGuitarDifficulty7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -7016,7 +7052,7 @@ namespace MagmaRokOn
             // PictureGuitarDifficulty1
             // 
             this.PictureGuitarDifficulty1.Enabled = false;
-            this.PictureGuitarDifficulty1.Location = new System.Drawing.Point(104, 136);
+            this.PictureGuitarDifficulty1.Location = new System.Drawing.Point(104, 129);
             this.PictureGuitarDifficulty1.Name = "PictureGuitarDifficulty1";
             this.PictureGuitarDifficulty1.Size = new System.Drawing.Size(14, 13);
             this.PictureGuitarDifficulty1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -7030,7 +7066,7 @@ namespace MagmaRokOn
             // PictureProBassDifficulty3
             // 
             this.PictureProBassDifficulty3.Enabled = false;
-            this.PictureProBassDifficulty3.Location = new System.Drawing.Point(136, 101);
+            this.PictureProBassDifficulty3.Location = new System.Drawing.Point(136, 92);
             this.PictureProBassDifficulty3.Name = "PictureProBassDifficulty3";
             this.PictureProBassDifficulty3.Size = new System.Drawing.Size(14, 13);
             this.PictureProBassDifficulty3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -7044,7 +7080,7 @@ namespace MagmaRokOn
             // PictureBassDifficulty5
             // 
             this.PictureBassDifficulty5.Enabled = false;
-            this.PictureBassDifficulty5.Location = new System.Drawing.Point(164, 66);
+            this.PictureBassDifficulty5.Location = new System.Drawing.Point(164, 55);
             this.PictureBassDifficulty5.Name = "PictureBassDifficulty5";
             this.PictureBassDifficulty5.Size = new System.Drawing.Size(14, 13);
             this.PictureBassDifficulty5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -7058,7 +7094,7 @@ namespace MagmaRokOn
             // PictureProBassDifficulty2
             // 
             this.PictureProBassDifficulty2.Enabled = false;
-            this.PictureProBassDifficulty2.Location = new System.Drawing.Point(122, 101);
+            this.PictureProBassDifficulty2.Location = new System.Drawing.Point(122, 92);
             this.PictureProBassDifficulty2.Name = "PictureProBassDifficulty2";
             this.PictureProBassDifficulty2.Size = new System.Drawing.Size(14, 13);
             this.PictureProBassDifficulty2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -7072,7 +7108,7 @@ namespace MagmaRokOn
             // PictureBassDifficulty4
             // 
             this.PictureBassDifficulty4.Enabled = false;
-            this.PictureBassDifficulty4.Location = new System.Drawing.Point(150, 66);
+            this.PictureBassDifficulty4.Location = new System.Drawing.Point(150, 55);
             this.PictureBassDifficulty4.Name = "PictureBassDifficulty4";
             this.PictureBassDifficulty4.Size = new System.Drawing.Size(14, 13);
             this.PictureBassDifficulty4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -7086,7 +7122,7 @@ namespace MagmaRokOn
             // PictureProBassDifficulty7
             // 
             this.PictureProBassDifficulty7.Enabled = false;
-            this.PictureProBassDifficulty7.Location = new System.Drawing.Point(196, 101);
+            this.PictureProBassDifficulty7.Location = new System.Drawing.Point(196, 92);
             this.PictureProBassDifficulty7.Name = "PictureProBassDifficulty7";
             this.PictureProBassDifficulty7.Size = new System.Drawing.Size(13, 13);
             this.PictureProBassDifficulty7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -7101,7 +7137,7 @@ namespace MagmaRokOn
             // 
             this.PictureDrumDifficulty5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureDrumDifficulty5.Enabled = false;
-            this.PictureDrumDifficulty5.Location = new System.Drawing.Point(164, 35);
+            this.PictureDrumDifficulty5.Location = new System.Drawing.Point(164, 17);
             this.PictureDrumDifficulty5.Name = "PictureDrumDifficulty5";
             this.PictureDrumDifficulty5.Size = new System.Drawing.Size(14, 13);
             this.PictureDrumDifficulty5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -7115,7 +7151,7 @@ namespace MagmaRokOn
             // PictureProBassDifficulty1
             // 
             this.PictureProBassDifficulty1.Enabled = false;
-            this.PictureProBassDifficulty1.Location = new System.Drawing.Point(104, 101);
+            this.PictureProBassDifficulty1.Location = new System.Drawing.Point(104, 92);
             this.PictureProBassDifficulty1.Name = "PictureProBassDifficulty1";
             this.PictureProBassDifficulty1.Size = new System.Drawing.Size(14, 13);
             this.PictureProBassDifficulty1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -7129,7 +7165,7 @@ namespace MagmaRokOn
             // PictureBassDifficulty3
             // 
             this.PictureBassDifficulty3.Enabled = false;
-            this.PictureBassDifficulty3.Location = new System.Drawing.Point(136, 66);
+            this.PictureBassDifficulty3.Location = new System.Drawing.Point(136, 55);
             this.PictureBassDifficulty3.Name = "PictureBassDifficulty3";
             this.PictureBassDifficulty3.Size = new System.Drawing.Size(14, 13);
             this.PictureBassDifficulty3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -7146,7 +7182,7 @@ namespace MagmaRokOn
             this.chkProGuitar.BackColor = System.Drawing.Color.Transparent;
             this.chkProGuitar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkProGuitar.Enabled = false;
-            this.chkProGuitar.Location = new System.Drawing.Point(12, 170);
+            this.chkProGuitar.Location = new System.Drawing.Point(13, 165);
             this.chkProGuitar.Name = "chkProGuitar";
             this.chkProGuitar.Size = new System.Drawing.Size(15, 14);
             this.chkProGuitar.TabIndex = 28;
@@ -7157,7 +7193,7 @@ namespace MagmaRokOn
             // PictureBassDifficulty2
             // 
             this.PictureBassDifficulty2.Enabled = false;
-            this.PictureBassDifficulty2.Location = new System.Drawing.Point(122, 66);
+            this.PictureBassDifficulty2.Location = new System.Drawing.Point(122, 55);
             this.PictureBassDifficulty2.Name = "PictureBassDifficulty2";
             this.PictureBassDifficulty2.Size = new System.Drawing.Size(14, 13);
             this.PictureBassDifficulty2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -7172,7 +7208,7 @@ namespace MagmaRokOn
             // 
             this.PictureDrumDifficulty4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureDrumDifficulty4.Enabled = false;
-            this.PictureDrumDifficulty4.Location = new System.Drawing.Point(150, 35);
+            this.PictureDrumDifficulty4.Location = new System.Drawing.Point(150, 17);
             this.PictureDrumDifficulty4.Name = "PictureDrumDifficulty4";
             this.PictureDrumDifficulty4.Size = new System.Drawing.Size(14, 13);
             this.PictureDrumDifficulty4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -7186,7 +7222,7 @@ namespace MagmaRokOn
             // PictureBassDifficulty7
             // 
             this.PictureBassDifficulty7.Enabled = false;
-            this.PictureBassDifficulty7.Location = new System.Drawing.Point(196, 66);
+            this.PictureBassDifficulty7.Location = new System.Drawing.Point(196, 55);
             this.PictureBassDifficulty7.Name = "PictureBassDifficulty7";
             this.PictureBassDifficulty7.Size = new System.Drawing.Size(13, 13);
             this.PictureBassDifficulty7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -7199,10 +7235,9 @@ namespace MagmaRokOn
             // 
             // LabelProGuitar
             // 
-            this.LabelProGuitar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LabelProGuitar.BackColor = System.Drawing.Color.Transparent;
             this.LabelProGuitar.ForeColor = System.Drawing.Color.IndianRed;
-            this.LabelProGuitar.Location = new System.Drawing.Point(30, 169);
+            this.LabelProGuitar.Location = new System.Drawing.Point(30, 164);
             this.LabelProGuitar.Name = "LabelProGuitar";
             this.LabelProGuitar.Size = new System.Drawing.Size(68, 15);
             this.LabelProGuitar.TabIndex = 114;
@@ -7212,7 +7247,7 @@ namespace MagmaRokOn
             // PictureBassDifficulty1
             // 
             this.PictureBassDifficulty1.Enabled = false;
-            this.PictureBassDifficulty1.Location = new System.Drawing.Point(104, 66);
+            this.PictureBassDifficulty1.Location = new System.Drawing.Point(104, 55);
             this.PictureBassDifficulty1.Name = "PictureBassDifficulty1";
             this.PictureBassDifficulty1.Size = new System.Drawing.Size(14, 13);
             this.PictureBassDifficulty1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -7227,7 +7262,7 @@ namespace MagmaRokOn
             // 
             this.PictureDrumDifficulty3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureDrumDifficulty3.Enabled = false;
-            this.PictureDrumDifficulty3.Location = new System.Drawing.Point(136, 35);
+            this.PictureDrumDifficulty3.Location = new System.Drawing.Point(136, 17);
             this.PictureDrumDifficulty3.Name = "PictureDrumDifficulty3";
             this.PictureDrumDifficulty3.Size = new System.Drawing.Size(14, 13);
             this.PictureDrumDifficulty3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -7242,7 +7277,7 @@ namespace MagmaRokOn
             // 
             this.PictureDrumDifficulty2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureDrumDifficulty2.Enabled = false;
-            this.PictureDrumDifficulty2.Location = new System.Drawing.Point(122, 35);
+            this.PictureDrumDifficulty2.Location = new System.Drawing.Point(122, 17);
             this.PictureDrumDifficulty2.Name = "PictureDrumDifficulty2";
             this.PictureDrumDifficulty2.Size = new System.Drawing.Size(14, 13);
             this.PictureDrumDifficulty2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -7259,7 +7294,7 @@ namespace MagmaRokOn
             this.chkProBass.BackColor = System.Drawing.Color.Transparent;
             this.chkProBass.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkProBass.Enabled = false;
-            this.chkProBass.Location = new System.Drawing.Point(12, 101);
+            this.chkProBass.Location = new System.Drawing.Point(13, 92);
             this.chkProBass.Name = "chkProBass";
             this.chkProBass.Size = new System.Drawing.Size(15, 14);
             this.chkProBass.TabIndex = 27;
@@ -7271,7 +7306,7 @@ namespace MagmaRokOn
             // 
             this.PictureDrumDifficulty7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureDrumDifficulty7.Enabled = false;
-            this.PictureDrumDifficulty7.Location = new System.Drawing.Point(196, 35);
+            this.PictureDrumDifficulty7.Location = new System.Drawing.Point(196, 17);
             this.PictureDrumDifficulty7.Name = "PictureDrumDifficulty7";
             this.PictureDrumDifficulty7.Size = new System.Drawing.Size(13, 13);
             this.PictureDrumDifficulty7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -7284,10 +7319,9 @@ namespace MagmaRokOn
             // 
             // LabelProBass
             // 
-            this.LabelProBass.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LabelProBass.BackColor = System.Drawing.Color.Transparent;
             this.LabelProBass.ForeColor = System.Drawing.Color.IndianRed;
-            this.LabelProBass.Location = new System.Drawing.Point(30, 99);
+            this.LabelProBass.Location = new System.Drawing.Point(30, 90);
             this.LabelProBass.Name = "LabelProBass";
             this.LabelProBass.Size = new System.Drawing.Size(68, 15);
             this.LabelProBass.TabIndex = 111;
@@ -7298,7 +7332,7 @@ namespace MagmaRokOn
             // 
             this.PictureDrumDifficulty1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureDrumDifficulty1.Enabled = false;
-            this.PictureDrumDifficulty1.Location = new System.Drawing.Point(104, 35);
+            this.PictureDrumDifficulty1.Location = new System.Drawing.Point(104, 17);
             this.PictureDrumDifficulty1.Name = "PictureDrumDifficulty1";
             this.PictureDrumDifficulty1.Size = new System.Drawing.Size(14, 13);
             this.PictureDrumDifficulty1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -7315,7 +7349,7 @@ namespace MagmaRokOn
             this.chkProKeys.BackColor = System.Drawing.Color.Transparent;
             this.chkProKeys.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkProKeys.Enabled = false;
-            this.chkProKeys.Location = new System.Drawing.Point(12, 276);
+            this.chkProKeys.Location = new System.Drawing.Point(13, 278);
             this.chkProKeys.Name = "chkProKeys";
             this.chkProKeys.Size = new System.Drawing.Size(15, 14);
             this.chkProKeys.TabIndex = 29;
@@ -7325,10 +7359,9 @@ namespace MagmaRokOn
             // 
             // LabelProKeysDifficulty
             // 
-            this.LabelProKeysDifficulty.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LabelProKeysDifficulty.BackColor = System.Drawing.Color.Transparent;
             this.LabelProKeysDifficulty.ForeColor = System.Drawing.Color.IndianRed;
-            this.LabelProKeysDifficulty.Location = new System.Drawing.Point(30, 274);
+            this.LabelProKeysDifficulty.Location = new System.Drawing.Point(30, 276);
             this.LabelProKeysDifficulty.Name = "LabelProKeysDifficulty";
             this.LabelProKeysDifficulty.Size = new System.Drawing.Size(68, 15);
             this.LabelProKeysDifficulty.TabIndex = 36;
@@ -7337,10 +7370,9 @@ namespace MagmaRokOn
             // 
             // LabelKeysDifficulty
             // 
-            this.LabelKeysDifficulty.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LabelKeysDifficulty.BackColor = System.Drawing.Color.Transparent;
             this.LabelKeysDifficulty.ForeColor = System.Drawing.Color.IndianRed;
-            this.LabelKeysDifficulty.Location = new System.Drawing.Point(30, 241);
+            this.LabelKeysDifficulty.Location = new System.Drawing.Point(30, 238);
             this.LabelKeysDifficulty.Name = "LabelKeysDifficulty";
             this.LabelKeysDifficulty.Size = new System.Drawing.Size(68, 15);
             this.LabelKeysDifficulty.TabIndex = 34;
@@ -7349,10 +7381,9 @@ namespace MagmaRokOn
             // 
             // LabelVocalDifficulty
             // 
-            this.LabelVocalDifficulty.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LabelVocalDifficulty.BackColor = System.Drawing.Color.Transparent;
             this.LabelVocalDifficulty.ForeColor = System.Drawing.Color.IndianRed;
-            this.LabelVocalDifficulty.Location = new System.Drawing.Point(30, 204);
+            this.LabelVocalDifficulty.Location = new System.Drawing.Point(30, 201);
             this.LabelVocalDifficulty.Name = "LabelVocalDifficulty";
             this.LabelVocalDifficulty.Size = new System.Drawing.Size(68, 15);
             this.LabelVocalDifficulty.TabIndex = 32;
@@ -7361,10 +7392,9 @@ namespace MagmaRokOn
             // 
             // LabelGuitarDifficulty
             // 
-            this.LabelGuitarDifficulty.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LabelGuitarDifficulty.BackColor = System.Drawing.Color.Transparent;
             this.LabelGuitarDifficulty.ForeColor = System.Drawing.Color.IndianRed;
-            this.LabelGuitarDifficulty.Location = new System.Drawing.Point(30, 134);
+            this.LabelGuitarDifficulty.Location = new System.Drawing.Point(30, 127);
             this.LabelGuitarDifficulty.Name = "LabelGuitarDifficulty";
             this.LabelGuitarDifficulty.Size = new System.Drawing.Size(68, 15);
             this.LabelGuitarDifficulty.TabIndex = 31;
@@ -7373,10 +7403,9 @@ namespace MagmaRokOn
             // 
             // LabelBassDifficulty
             // 
-            this.LabelBassDifficulty.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LabelBassDifficulty.BackColor = System.Drawing.Color.Transparent;
             this.LabelBassDifficulty.ForeColor = System.Drawing.Color.IndianRed;
-            this.LabelBassDifficulty.Location = new System.Drawing.Point(30, 64);
+            this.LabelBassDifficulty.Location = new System.Drawing.Point(30, 53);
             this.LabelBassDifficulty.Name = "LabelBassDifficulty";
             this.LabelBassDifficulty.Size = new System.Drawing.Size(68, 15);
             this.LabelBassDifficulty.TabIndex = 30;
@@ -7385,10 +7414,9 @@ namespace MagmaRokOn
             // 
             // LabelDrumDifficulty
             // 
-            this.LabelDrumDifficulty.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LabelDrumDifficulty.BackColor = System.Drawing.Color.Transparent;
             this.LabelDrumDifficulty.ForeColor = System.Drawing.Color.IndianRed;
-            this.LabelDrumDifficulty.Location = new System.Drawing.Point(30, 33);
+            this.LabelDrumDifficulty.Location = new System.Drawing.Point(30, 15);
             this.LabelDrumDifficulty.Name = "LabelDrumDifficulty";
             this.LabelDrumDifficulty.Size = new System.Drawing.Size(68, 15);
             this.LabelDrumDifficulty.TabIndex = 29;
@@ -7397,10 +7425,9 @@ namespace MagmaRokOn
             // 
             // LabelBandDifficulty
             // 
-            this.LabelBandDifficulty.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LabelBandDifficulty.BackColor = System.Drawing.Color.Transparent;
             this.LabelBandDifficulty.ForeColor = System.Drawing.Color.IndianRed;
-            this.LabelBandDifficulty.Location = new System.Drawing.Point(30, 308);
+            this.LabelBandDifficulty.Location = new System.Drawing.Point(30, 313);
             this.LabelBandDifficulty.Name = "LabelBandDifficulty";
             this.LabelBandDifficulty.Size = new System.Drawing.Size(68, 15);
             this.LabelBandDifficulty.TabIndex = 24;
@@ -8299,6 +8326,213 @@ namespace MagmaRokOn
             this.updater.DoWork += new System.ComponentModel.DoWorkEventHandler(this.updater_DoWork);
             this.updater.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.updater_RunWorkerCompleted);
             // 
+            // scrollDrums
+            // 
+            this.scrollDrums.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.scrollDrums.LargeChange = 1;
+            this.scrollDrums.Location = new System.Drawing.Point(104, 34);
+            this.scrollDrums.Maximum = 448;
+            this.scrollDrums.Name = "scrollDrums";
+            this.scrollDrums.Size = new System.Drawing.Size(105, 16);
+            this.scrollDrums.TabIndex = 124;
+            this.scrollDrums.ValueChanged += new System.EventHandler(this.scrollDrums_ValueChanged);
+            // 
+            // lblDrumsDiff
+            // 
+            this.lblDrumsDiff.BackColor = System.Drawing.Color.White;
+            this.lblDrumsDiff.ForeColor = System.Drawing.Color.Black;
+            this.lblDrumsDiff.Location = new System.Drawing.Point(220, 34);
+            this.lblDrumsDiff.Name = "lblDrumsDiff";
+            this.lblDrumsDiff.Size = new System.Drawing.Size(30, 16);
+            this.lblDrumsDiff.TabIndex = 125;
+            this.lblDrumsDiff.Text = "0";
+            this.lblDrumsDiff.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ToolTip.SetToolTip(this.lblDrumsDiff, "Drums Difficulty");
+            // 
+            // scrollBass
+            // 
+            this.scrollBass.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.scrollBass.LargeChange = 1;
+            this.scrollBass.Location = new System.Drawing.Point(104, 71);
+            this.scrollBass.Maximum = 436;
+            this.scrollBass.Name = "scrollBass";
+            this.scrollBass.Size = new System.Drawing.Size(105, 16);
+            this.scrollBass.TabIndex = 126;
+            this.scrollBass.ValueChanged += new System.EventHandler(this.scrollBass_ValueChanged);
+            // 
+            // lblBassDiff
+            // 
+            this.lblBassDiff.BackColor = System.Drawing.Color.White;
+            this.lblBassDiff.ForeColor = System.Drawing.Color.Black;
+            this.lblBassDiff.Location = new System.Drawing.Point(220, 71);
+            this.lblBassDiff.Name = "lblBassDiff";
+            this.lblBassDiff.Size = new System.Drawing.Size(30, 16);
+            this.lblBassDiff.TabIndex = 127;
+            this.lblBassDiff.Text = "0";
+            this.lblBassDiff.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ToolTip.SetToolTip(this.lblBassDiff, "Bass Difficulty");
+            // 
+            // scrollProBass
+            // 
+            this.scrollProBass.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.scrollProBass.LargeChange = 1;
+            this.scrollProBass.Location = new System.Drawing.Point(104, 108);
+            this.scrollProBass.Maximum = 442;
+            this.scrollProBass.Name = "scrollProBass";
+            this.scrollProBass.Size = new System.Drawing.Size(105, 16);
+            this.scrollProBass.TabIndex = 128;
+            this.scrollProBass.ValueChanged += new System.EventHandler(this.scrollProBass_ValueChanged);
+            // 
+            // lblProBassDiff
+            // 
+            this.lblProBassDiff.BackColor = System.Drawing.Color.White;
+            this.lblProBassDiff.ForeColor = System.Drawing.Color.Black;
+            this.lblProBassDiff.Location = new System.Drawing.Point(220, 108);
+            this.lblProBassDiff.Name = "lblProBassDiff";
+            this.lblProBassDiff.Size = new System.Drawing.Size(30, 16);
+            this.lblProBassDiff.TabIndex = 129;
+            this.lblProBassDiff.Text = "0";
+            this.lblProBassDiff.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ToolTip.SetToolTip(this.lblProBassDiff, "Pro Bass Difficulty");
+            // 
+            // scrollGuitar
+            // 
+            this.scrollGuitar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.scrollGuitar.LargeChange = 1;
+            this.scrollGuitar.Location = new System.Drawing.Point(104, 145);
+            this.scrollGuitar.Maximum = 409;
+            this.scrollGuitar.Name = "scrollGuitar";
+            this.scrollGuitar.Size = new System.Drawing.Size(105, 16);
+            this.scrollGuitar.TabIndex = 130;
+            this.scrollGuitar.ValueChanged += new System.EventHandler(this.scrollGuitar_ValueChanged);
+            // 
+            // lblGuitarDiff
+            // 
+            this.lblGuitarDiff.BackColor = System.Drawing.Color.White;
+            this.lblGuitarDiff.ForeColor = System.Drawing.Color.Black;
+            this.lblGuitarDiff.Location = new System.Drawing.Point(220, 145);
+            this.lblGuitarDiff.Name = "lblGuitarDiff";
+            this.lblGuitarDiff.Size = new System.Drawing.Size(30, 16);
+            this.lblGuitarDiff.TabIndex = 131;
+            this.lblGuitarDiff.Text = "0";
+            this.lblGuitarDiff.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ToolTip.SetToolTip(this.lblGuitarDiff, "Guitar Difficulty");
+            // 
+            // scrollProGuitar
+            // 
+            this.scrollProGuitar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.scrollProGuitar.LargeChange = 1;
+            this.scrollProGuitar.Location = new System.Drawing.Point(104, 182);
+            this.scrollProGuitar.Maximum = 442;
+            this.scrollProGuitar.Name = "scrollProGuitar";
+            this.scrollProGuitar.Size = new System.Drawing.Size(105, 16);
+            this.scrollProGuitar.TabIndex = 132;
+            this.scrollProGuitar.ValueChanged += new System.EventHandler(this.scrollProGuitar_ValueChanged);
+            // 
+            // lblProGuitarDiff
+            // 
+            this.lblProGuitarDiff.BackColor = System.Drawing.Color.White;
+            this.lblProGuitarDiff.ForeColor = System.Drawing.Color.Black;
+            this.lblProGuitarDiff.Location = new System.Drawing.Point(220, 182);
+            this.lblProGuitarDiff.Name = "lblProGuitarDiff";
+            this.lblProGuitarDiff.Size = new System.Drawing.Size(30, 16);
+            this.lblProGuitarDiff.TabIndex = 133;
+            this.lblProGuitarDiff.Text = "0";
+            this.lblProGuitarDiff.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ToolTip.SetToolTip(this.lblProGuitarDiff, "Pro Guitar Difficulty");
+            // 
+            // scrollVocals
+            // 
+            this.scrollVocals.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.scrollVocals.LargeChange = 1;
+            this.scrollVocals.Location = new System.Drawing.Point(104, 219);
+            this.scrollVocals.Maximum = 427;
+            this.scrollVocals.Name = "scrollVocals";
+            this.scrollVocals.Size = new System.Drawing.Size(105, 16);
+            this.scrollVocals.TabIndex = 134;
+            this.scrollVocals.ValueChanged += new System.EventHandler(this.scrollVocals_ValueChanged);
+            // 
+            // lblVocalsDiff
+            // 
+            this.lblVocalsDiff.BackColor = System.Drawing.Color.White;
+            this.lblVocalsDiff.ForeColor = System.Drawing.Color.Black;
+            this.lblVocalsDiff.Location = new System.Drawing.Point(220, 219);
+            this.lblVocalsDiff.Name = "lblVocalsDiff";
+            this.lblVocalsDiff.Size = new System.Drawing.Size(30, 16);
+            this.lblVocalsDiff.TabIndex = 135;
+            this.lblVocalsDiff.Text = "0";
+            this.lblVocalsDiff.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ToolTip.SetToolTip(this.lblVocalsDiff, "Vocals Difficulty");
+            // 
+            // scrollKeys
+            // 
+            this.scrollKeys.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.scrollKeys.LargeChange = 1;
+            this.scrollKeys.Location = new System.Drawing.Point(104, 256);
+            this.scrollKeys.Maximum = 443;
+            this.scrollKeys.Name = "scrollKeys";
+            this.scrollKeys.Size = new System.Drawing.Size(105, 16);
+            this.scrollKeys.TabIndex = 136;
+            this.scrollKeys.ValueChanged += new System.EventHandler(this.scrollKeys_ValueChanged);
+            // 
+            // lblKeysDiff
+            // 
+            this.lblKeysDiff.BackColor = System.Drawing.Color.White;
+            this.lblKeysDiff.ForeColor = System.Drawing.Color.Black;
+            this.lblKeysDiff.Location = new System.Drawing.Point(220, 256);
+            this.lblKeysDiff.Name = "lblKeysDiff";
+            this.lblKeysDiff.Size = new System.Drawing.Size(30, 16);
+            this.lblKeysDiff.TabIndex = 137;
+            this.lblKeysDiff.Text = "0";
+            this.lblKeysDiff.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ToolTip.SetToolTip(this.lblKeysDiff, "Keys Difficulty");
+            // 
+            // scrollProKeys
+            // 
+            this.scrollProKeys.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.scrollProKeys.LargeChange = 1;
+            this.scrollProKeys.Location = new System.Drawing.Point(104, 294);
+            this.scrollProKeys.Maximum = 443;
+            this.scrollProKeys.Name = "scrollProKeys";
+            this.scrollProKeys.Size = new System.Drawing.Size(105, 16);
+            this.scrollProKeys.TabIndex = 138;
+            this.scrollProKeys.ValueChanged += new System.EventHandler(this.scrollProKeys_ValueChanged);
+            // 
+            // lblProKeysDiff
+            // 
+            this.lblProKeysDiff.BackColor = System.Drawing.Color.White;
+            this.lblProKeysDiff.ForeColor = System.Drawing.Color.Black;
+            this.lblProKeysDiff.Location = new System.Drawing.Point(220, 294);
+            this.lblProKeysDiff.Name = "lblProKeysDiff";
+            this.lblProKeysDiff.Size = new System.Drawing.Size(30, 16);
+            this.lblProKeysDiff.TabIndex = 139;
+            this.lblProKeysDiff.Text = "0";
+            this.lblProKeysDiff.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ToolTip.SetToolTip(this.lblProKeysDiff, "Pro Keys Difficulty");
+            // 
+            // scrollBand
+            // 
+            this.scrollBand.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.scrollBand.LargeChange = 1;
+            this.scrollBand.Location = new System.Drawing.Point(104, 331);
+            this.scrollBand.Maximum = 345;
+            this.scrollBand.Name = "scrollBand";
+            this.scrollBand.Size = new System.Drawing.Size(105, 16);
+            this.scrollBand.TabIndex = 140;
+            this.scrollBand.ValueChanged += new System.EventHandler(this.scrollBand_ValueChanged);
+            // 
+            // lblBandDiff
+            // 
+            this.lblBandDiff.BackColor = System.Drawing.Color.White;
+            this.lblBandDiff.ForeColor = System.Drawing.Color.Black;
+            this.lblBandDiff.Location = new System.Drawing.Point(220, 331);
+            this.lblBandDiff.Name = "lblBandDiff";
+            this.lblBandDiff.Size = new System.Drawing.Size(30, 16);
+            this.lblBandDiff.TabIndex = 141;
+            this.lblBandDiff.Text = "0";
+            this.lblBandDiff.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ToolTip.SetToolTip(this.lblBandDiff, "Band Difficulty");
+            // 
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -8850,5 +9084,23 @@ namespace MagmaRokOn
         private PictureBox picUnpitched;
         private CheckBox chkPartial;
         private PictureBox picPartial;
+        private HScrollBar scrollDrums;
+        private Label lblDrumsDiff;
+        private Label lblBassDiff;
+        private HScrollBar scrollBass;
+        private HScrollBar scrollProBass;
+        private Label lblProBassDiff;
+        private Label lblGuitarDiff;
+        private HScrollBar scrollGuitar;
+        private Label lblProGuitarDiff;
+        private HScrollBar scrollProGuitar;
+        private Label lblVocalsDiff;
+        private HScrollBar scrollVocals;
+        private HScrollBar scrollKeys;
+        private Label lblKeysDiff;
+        private Label lblProKeysDiff;
+        private HScrollBar scrollProKeys;
+        private HScrollBar scrollBand;
+        private Label lblBandDiff;
     }
 }

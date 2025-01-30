@@ -188,7 +188,17 @@ namespace MagmaRokOn
         public bool doLIVE;
         public bool useNumericID;
         public bool isBusy;
-        
+
+        public int difficultyDrums;
+        public int difficultyBass;
+        public int difficultyProBass;
+        public int difficultyGuitar;
+        public int difficultyProGuitar;
+        public int difficultyVocals;
+        public int difficultyKeys;
+        public int difficultyProKeys;
+        public int difficultyBand;
+
         private readonly bool[] ToDoImportant = { false, false, false, false, false, false, false, false, false, false, false, false, false, false, false };
         private readonly bool[] ToDoCompleted = { false, false, false, false, false, false, false, false, false, false, false, false, false, false, false };
         
@@ -1256,6 +1266,16 @@ namespace MagmaRokOn
 
             EncodingQualityUpDown.SelectedItem = "03 (default)";
             EncodingQuality = 3;
+
+            scrollDrums.Value = 0;
+            scrollBass.Value = 0;
+            scrollProBass.Value = 0;
+            scrollGuitar.Value = 0;
+            scrollProGuitar.Value = 0;
+            scrollKeys.Value = 0;
+            scrollProKeys.Value = 0;
+            scrollVocals.Value = 0;
+            scrollBand.Value = 0;
 
             chkTempo.Checked = !neverCheckForTempoMap.Checked;
             chkDrumsMix.Checked = true;
@@ -2330,6 +2350,16 @@ namespace MagmaRokOn
             isCATEMH = chkCAT.Checked;
             doLIVE = signSongAsLIVE.Checked;
             useNumericID = useUniqueNumericSongID.Checked;
+
+            difficultyDrums = scrollDrums.Value;
+            difficultyBass = scrollBass.Value;
+            difficultyProBass = scrollProBass.Value;
+            difficultyGuitar = scrollGuitar.Value;
+            difficultyProGuitar = scrollProGuitar.Value;
+            difficultyVocals = scrollVocals.Value;
+            difficultyKeys = scrollKeys.Value;
+            difficultyProKeys = scrollProKeys.Value;
+            difficultyBand = scrollBand.Value;
 
             OverrideArt = overrideAlbumArt.Checked;
             OverrideMilo = overrideMiloFile.Checked;
@@ -8730,14 +8760,16 @@ namespace MagmaRokOn
                 } while (!line.Contains("ToDo") || line.StartsWith("//", StringComparison.Ordinal));
 
                 ClearToDoList();
-                do
+                while ((line = sr.ReadLine()) != null)
                 {
+                    if (line.Contains("Magma: Rok On Edition To Do Template End"))
+                        break;
+
                     if (!line.StartsWith("//", StringComparison.Ordinal) && !line.Contains("=;False"))
                     {
                         GetToDoFromFile(line, true);
                     }
-                    line = sr.ReadLine();
-                } while (!line.Contains("Magma: Rok On Edition To Do Template End"));
+                }
                 sr.Dispose();
                 DoShowToast("Loaded template " + Path.GetFileName(template) + " successfully");
             }
@@ -9168,6 +9200,187 @@ namespace MagmaRokOn
             chkXOnly.Checked = !chkXOnly.Checked;
         }
 
+        private int GetDifficultyValue(int difficulty, string instrument)
+        {
+            switch (instrument)
+            {
+                case "Drum":
+                    switch (difficulty)
+                    {
+                        case 1:
+                            return 1;
+                        case 2:
+                            return 124;
+                        case 3:
+                            return 151;
+                        case 4:
+                            return 178;
+                        case 5:
+                            return 242;
+                        case 6:
+                            return 345;
+                        case 7:
+                            return 448;
+                    }
+                    break;
+                case "Bass":
+                    switch (difficulty)
+                    {
+                        case 1:
+                            return 1;
+                        case 2:
+                            return 135;
+                        case 3:
+                            return 181;
+                        case 4:
+                            return 228;
+                        case 5:
+                            return 293;
+                        case 6:
+                            return 364;
+                        case 7:
+                            return 436;
+                    }
+                    break;
+                case "ProBass":
+                    switch (difficulty)
+                    {
+                        case 1:
+                            return 1;
+                        case 2:
+                            return 150;
+                        case 3:
+                            return 208;
+                        case 4:
+                            return 267;
+                        case 5:
+                            return 325;
+                        case 6:
+                            return 384;
+                        case 7:
+                            return 442;
+                    }
+                    break;
+                case "Guitar":
+                    switch (difficulty)
+                    {
+                        case 1:
+                            return 1;
+                        case 2:
+                            return 139;
+                        case 3:
+                            return 176;
+                        case 4:
+                            return 221;
+                        case 5:
+                            return 267;
+                        case 6:
+                            return 333;
+                        case 7:
+                            return 409;
+                    }
+                    break;
+                case "ProGuitar":
+                    switch (difficulty)
+                    {
+                        case 1:
+                            return 1;
+                        case 2:
+                            return 150;
+                        case 3:
+                            return 208;
+                        case 4:
+                            return 267;
+                        case 5:
+                            return 325;
+                        case 6:
+                            return 384;
+                        case 7:
+                            return 442;
+                    }
+                    break;
+                case "Keys":
+                    switch (difficulty)
+                    {
+                        case 1:
+                            return 1;
+                        case 2:
+                            return 153;
+                        case 3:
+                            return 211;
+                        case 4:
+                            return 269;
+                        case 5:
+                            return 327;
+                        case 6:
+                            return 385;
+                        case 7:
+                            return 443;
+                    }
+                    break;
+                case "ProKeys":
+                    switch (difficulty)
+                    {
+                        case 1:
+                            return 1;
+                        case 2:
+                            return 153;
+                        case 3:
+                            return 211;
+                        case 4:
+                            return 269;
+                        case 5:
+                            return 327;
+                        case 6:
+                            return 385;
+                        case 7:
+                            return 443;
+                    }
+                    break;
+                case "Vocal":
+                    switch (difficulty)
+                    {
+                        case 1:
+                            return 1;
+                        case 2:
+                            return 132;
+                        case 3:
+                            return 175;
+                        case 4:
+                            return 218;
+                        case 5:
+                            return 279;
+                        case 6:
+                            return 353;
+                        case 7:
+                            return 427;
+                    }
+                    break;
+                case "Band":
+                    switch (difficulty)
+                    {
+                        case 1:
+                            return 1;
+                        case 2:
+                            return 165;
+                        case 3:
+                            return 215;
+                        case 4:
+                            return 243;
+                        case 5:
+                            return 267;
+                        case 6:
+                            return 292;
+                        case 7:
+                            return 345;
+                    }
+                    break;
+                default:
+                    return 0;
+            }
+            return 0;
+        }
+
         private void Difficulty_Click(object sender, MouseEventArgs e)
         {
             if (e != null && e.Button != MouseButtons.Left) return;
@@ -9181,38 +9394,47 @@ namespace MagmaRokOn
                 case "Drum":
                     ProjectFile.RankDrum = difficulty;
                     UpdateDifficultyDisplayNEMO(PictureDrumDifficulty1, difficulty, true);
+                    scrollDrums.Value = GetDifficultyValue(difficulty, track);
                     break;
                 case "Bass":
                     ProjectFile.RankBass = difficulty;
                     UpdateDifficultyDisplayNEMO(PictureBassDifficulty1, difficulty, true);
+                    scrollBass.Value = GetDifficultyValue(difficulty, track);
                     break;
                 case "ProBass":
                     RankProBass = difficulty;
                     UpdateDifficultyDisplayNEMO(PictureProBassDifficulty1, difficulty, true);
+                    scrollProBass.Value = GetDifficultyValue(difficulty, track);
                     break;
                 case "Guitar":
                     ProjectFile.RankGuitar = difficulty;
                     UpdateDifficultyDisplayNEMO(PictureGuitarDifficulty1, difficulty, true);
+                    scrollGuitar.Value = GetDifficultyValue(difficulty, track);
                     break;
                 case "ProGuitar":
                     RankProGuitar = difficulty;
                     UpdateDifficultyDisplayNEMO(PictureProGuitarDifficulty1, difficulty, true);
+                    scrollProGuitar.Value = GetDifficultyValue(difficulty, track);
                     break;
                 case "Vocal":
                     ProjectFile.RankVocals = difficulty;
                     UpdateDifficultyDisplayNEMO(PictureVocalDifficulty1, difficulty, true);
+                    scrollVocals.Value = GetDifficultyValue(difficulty, track);
                     break;
                 case "Keys":
                     ProjectFile.RankKeys = difficulty;
                     UpdateDifficultyDisplayNEMO(PictureKeysDifficulty1, difficulty, true);
+                    scrollKeys.Value = GetDifficultyValue(difficulty, track);
                     break;
                 case "ProKeys":
                     ProjectFile.RankProKeys = difficulty;
                     UpdateDifficultyDisplayNEMO(PictureProKeysDifficulty1, difficulty, true);
+                    scrollProKeys.Value = GetDifficultyValue(difficulty, track);
                     break;
                 case "Band":
                     ProjectFile.RankBand = difficulty;
                     UpdateDifficultyDisplayNEMO(PictureBandDifficulty1, difficulty, true);
+                    scrollBand.Value = GetDifficultyValue(difficulty, track);
                     break;
             }
             RefreshWindowTitle();
@@ -10329,6 +10551,51 @@ namespace MagmaRokOn
                 DoShowToast("Song marked as Partial Multitracks");
             }
             RefreshWindowTitle();
+        }
+
+        private void scrollDrums_ValueChanged(object sender, EventArgs e)
+        {
+            lblDrumsDiff.Text = scrollDrums.Value.ToString();
+        }
+
+        private void scrollBass_ValueChanged(object sender, EventArgs e)
+        {
+            lblBassDiff.Text = scrollBass.Value.ToString();
+        }
+
+        private void scrollProBass_ValueChanged(object sender, EventArgs e)
+        {
+            lblProBassDiff.Text = scrollProBass.Value.ToString();
+        }
+
+        private void scrollGuitar_ValueChanged(object sender, EventArgs e)
+        {
+            lblGuitarDiff.Text = scrollGuitar.Value.ToString();
+        }
+
+        private void scrollProGuitar_ValueChanged(object sender, EventArgs e)
+        {
+            lblProGuitarDiff.Text = scrollProGuitar.Value.ToString();
+        }
+
+        private void scrollVocals_ValueChanged(object sender, EventArgs e)
+        {
+            lblVocalsDiff.Text = scrollVocals.Value.ToString();
+        }
+
+        private void scrollKeys_ValueChanged(object sender, EventArgs e)
+        {
+            lblKeysDiff.Text = scrollKeys.Value.ToString();
+        }
+
+        private void scrollProKeys_ValueChanged(object sender, EventArgs e)
+        {
+            lblProKeysDiff.Text = scrollProKeys.Value.ToString();
+        }
+
+        private void scrollBand_ValueChanged(object sender, EventArgs e)
+        {
+            lblBandDiff.Text = scrollBand.Value.ToString();
         }
     }
 }
