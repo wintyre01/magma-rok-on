@@ -696,22 +696,7 @@ namespace MagmaRokOn
                                     swSongsDta.WriteLine(line);
                                     line = "   " + mMainForm.InstrumentSolos;
                                 }
-                            }
-                            else if (line.Contains("('real_guitar' 0)"))
-                            {
-                                // Swallow this line - don't put it in the final songs.dta
-                                // because it prevents you from making a separate upgrades.dta
-                                //only if there is no pro guitar in the song!
-
-                                if (mMainForm.HasProGuitar && mMainForm.ProGuitarDiff != 0)
-                                {
-                                    line = line.Replace("0", mMainForm.difficultyProGuitar.ToString(CultureInfo.InvariantCulture));//mMainForm.ProGuitarDiff.ToString(CultureInfo.InvariantCulture));
-                                }
-                                else
-                                {
-                                    line = "";
-                                }
-                            }
+                            }                            
                             else if (line.Contains("tracks_count") && mMainForm.CrowdAudio != "")
                             {
                                 swSongsDta.WriteLine();
@@ -759,40 +744,36 @@ namespace MagmaRokOn
                             {
                                 swSongsDta.WriteLine(line);
                                 srSongsRaw.ReadLine();
-                                swSongsDta.WriteLine("('drum' " + mMainForm.difficultyDrums + ")");
+                                swSongsDta.WriteLine("   ('drum' " + mMainForm.difficultyDrums + ")");
                                 srSongsRaw.ReadLine();
-                                swSongsDta.WriteLine("('guitar' " + mMainForm.difficultyGuitar + ")");
+                                swSongsDta.WriteLine("   ('guitar' " + mMainForm.difficultyGuitar + ")");
                                 srSongsRaw.ReadLine();
-                                swSongsDta.WriteLine("('bass' " + mMainForm.difficultyBass + ")");
+                                swSongsDta.WriteLine("   ('bass' " + mMainForm.difficultyBass + ")");
                                 srSongsRaw.ReadLine();
-                                swSongsDta.WriteLine("('vocals' " + mMainForm.difficultyVocals + ")");
+                                swSongsDta.WriteLine("   ('vocals' " + mMainForm.difficultyVocals + ")");
                                 srSongsRaw.ReadLine();
-                                swSongsDta.WriteLine("('keys' " + mMainForm.difficultyKeys + ")");
+                                swSongsDta.WriteLine("   ('keys' " + mMainForm.difficultyKeys + ")");
                                 srSongsRaw.ReadLine();
-                                swSongsDta.WriteLine("('real_keys' " + mMainForm.difficultyProKeys + ")");
+                                swSongsDta.WriteLine("   ('real_keys' " + mMainForm.difficultyProKeys + ")");
                                 srSongsRaw.ReadLine();
-                                swSongsDta.WriteLine("('band' " + mMainForm.difficultyBand + ")");
+                                if (mMainForm.difficultyProGuitar > 0)
+                                {
+                                    swSongsDta.WriteLine("   ('real_guitar' " + mMainForm.difficultyProGuitar + ")");
+                                }
+                                srSongsRaw.ReadLine();
+                                if (mMainForm.difficultyProBass > 0)
+                                {
+                                    swSongsDta.WriteLine("   ('real_bass' " + mMainForm.difficultyProBass + ")");
+                                }
+                                srSongsRaw.ReadLine();
+                                swSongsDta.WriteLine("   ('band' " + mMainForm.difficultyBand + ")");
+                                line = "";
                             }
                             else if (line.Contains("encoding"))
                             {
-                                swSongsDta.WriteLine("(band_fail_cue " + mMainForm.bandFailText + ")");
+                                swSongsDta.WriteLine("   (band_fail_cue " + mMainForm.bandFailText + ")");
                                 line = "   ('encoding' '" + mMainForm.Encoding + "')";
-                            }
-                            else if (line.Contains("('real_bass' 0)"))
-                            {
-                                // Swallow this line - don't put it in the final songs.dta
-                                // because it prevents you from making a separate upgrades.dta
-                                //only if there is no pro bass in the song!
-                                
-                                if (mMainForm.HasProBass && mMainForm.ProBassDiff != 0)
-                                {
-                                    line = line.Replace("0", mMainForm.difficultyProBass.ToString(CultureInfo.InvariantCulture));//mMainForm.ProBassDiff.ToString(CultureInfo.InvariantCulture));
-                                }
-                                else
-                                {
-                                    line = "";
-                                }
-                            }
+                            }                            
                             else if (line.Contains("'tuning_offset_cents' 0.00)"))
                             {
                                 line = line.Replace("0.00", mMainForm.TuningCents.ToString(CultureInfo.InvariantCulture));

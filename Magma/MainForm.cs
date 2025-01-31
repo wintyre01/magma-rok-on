@@ -3727,6 +3727,10 @@ namespace MagmaRokOn
            {
                sw.WriteLine("TonicNote=" + ComboTonicNote.SelectedIndex);
            }
+           if (chkTonality.Checked && cboTonality.SelectedIndex != -1)
+            {
+                sw.WriteLine("Tonality=" + cboTonality.SelectedIndex);
+            }
            sw.WriteLine("TuningCents=" + numericTuningCents.Value);
            sw.WriteLine("SongRating=" + (ComboRating.SelectedIndex + 1));
            sw.WriteLine("DrumKitSFX=" + ComboDrumSFX.SelectedIndex);
@@ -3756,7 +3760,16 @@ namespace MagmaRokOn
            sw.WriteLine("UniqueNumericID=" + UniqueNumericID);
            sw.WriteLine("UniqueNumericID2X=" + UniqueNumericID2x);
            sw.WriteLine("DIYStems=" + chkDIYStems.Checked);
-           sw.WriteLine("");
+            sw.WriteLine("drumsDifficulty=" + scrollDrums.Value);
+            sw.WriteLine("bassDifficulty=" + scrollBass.Value);
+            sw.WriteLine("proBassDifficulty=" + scrollProBass.Value);
+            sw.WriteLine("guitarDifficulty=" + scrollGuitar.Value);
+            sw.WriteLine("proGuitarDifficulty=" + scrollProGuitar.Value);
+            sw.WriteLine("keysDifficulty=" + scrollKeys.Value);
+            sw.WriteLine("proKeysDifficulty=" + scrollProKeys.Value);
+            sw.WriteLine("vocalsDifficulty=" + scrollVocals.Value);
+            sw.WriteLine("bandDifficulty=" + scrollBand.Value);
+            sw.WriteLine("");
            sw.WriteLine("TO DO List Begin");
 
            for (var i = 0; i < 15; i++)
@@ -3780,14 +3793,17 @@ namespace MagmaRokOn
            //and expecting a specific format will break compatibility with older versions
            //if you can figure it out in a better way than the mess below, awesome
 
-           filename = Path.GetDirectoryName(filename) + "\\" + Path.GetFileNameWithoutExtension(filename) + ".rok";
-           var hasToDo = false;
+            filename = Path.GetDirectoryName(filename) + "\\" + Path.GetFileNameWithoutExtension(filename) + ".rok";
+            var filenameC3 = filename.Replace(".rok", ".c3");
+            var hasToDo = false;
 
-           starting = true; //disable toast notifications while loading the file
+            starting = true; //disable toast notifications while loading the file
 
-           if (File.Exists(filename))
+            var fix = File.Exists(filename) ? filename : filenameC3;
+
+           if (File.Exists(fix))
            {
-               var sr = new StreamReader(filename, System.Text.Encoding.Default);
+               var sr = new StreamReader(fix, System.Text.Encoding.Default);
                while (!sr.EndOfStream)
                {
                    var line = sr.ReadLine();
@@ -3869,6 +3885,11 @@ namespace MagmaRokOn
                        ComboTonicNote.SelectedIndex = Convert.ToInt16(Tools.GetConfigString(line));
                        chkTonicNote.Checked = true;
                    }
+                   else if (line.Contains("Tonality=") && line.Contains("-1"))
+                   {
+                        cboTonality.SelectedIndex = Convert.ToInt16(Tools.GetConfigString(line));
+                        chkTonality.Checked = true;
+                    }
                    else if (line.Contains("RhythmBass="))
                    {
                        chkRhythmBass.Checked = line.Contains("1") || line.ToLowerInvariant().Contains("true");
@@ -4092,8 +4113,44 @@ namespace MagmaRokOn
                    {
                        UniqueNumericID2x = Tools.GetConfigString(line);
                    }
+                   else if (line.Contains("drumsDifficulty="))
+                    {
+                        scrollDrums.Value = Convert.ToInt16(Tools.GetConfigString(line));
+                    }
+                    else if (line.Contains("bassDifficulty="))
+                    {
+                        scrollBass.Value = Convert.ToInt16(Tools.GetConfigString(line));
+                    }
+                    else if (line.Contains("proBassDifficulty="))
+                    {
+                        scrollProBass.Value = Convert.ToInt16(Tools.GetConfigString(line));
+                    }
+                    else if (line.Contains("guitarDifficulty="))
+                    {
+                        scrollGuitar.Value = Convert.ToInt16(Tools.GetConfigString(line));
+                    }
+                    else if (line.Contains("proGuitarDifficulty="))
+                    {
+                        scrollProGuitar.Value = Convert.ToInt16(Tools.GetConfigString(line));
+                    }
+                    else if (line.Contains("keysDifficulty="))
+                    {
+                        scrollKeys.Value = Convert.ToInt16(Tools.GetConfigString(line));
+                    }
+                    else if (line.Contains("proKeysDifficulty="))
+                    {
+                        scrollProKeys.Value = Convert.ToInt16(Tools.GetConfigString(line));
+                    }
+                    else if (line.Contains("vocalsDifficulty="))
+                    {
+                        scrollVocals.Value = Convert.ToInt16(Tools.GetConfigString(line));
+                    }
+                    else if (line.Contains("bandDifficulty="))
+                    {
+                        scrollBand.Value = Convert.ToInt16(Tools.GetConfigString(line));
+                    }
 
-                   if (!line.Contains("TO DO List Begin")) continue;
+                    if (!line.Contains("TO DO List Begin")) continue;
                    hasToDo = true;
                    ClearToDoList();
                    do
