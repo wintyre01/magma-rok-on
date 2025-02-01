@@ -513,6 +513,24 @@ namespace MagmaRokOn
             this.LabelPercussion = new System.Windows.Forms.Label();
             this.LabelVocalGender = new System.Windows.Forms.Label();
             this.GroupBoxDifficulty = new System.Windows.Forms.GroupBox();
+            this.lblBandDiff = new System.Windows.Forms.Label();
+            this.scrollBand = new System.Windows.Forms.HScrollBar();
+            this.lblProKeysDiff = new System.Windows.Forms.Label();
+            this.scrollProKeys = new System.Windows.Forms.HScrollBar();
+            this.lblKeysDiff = new System.Windows.Forms.Label();
+            this.scrollKeys = new System.Windows.Forms.HScrollBar();
+            this.lblVocalsDiff = new System.Windows.Forms.Label();
+            this.scrollVocals = new System.Windows.Forms.HScrollBar();
+            this.lblProGuitarDiff = new System.Windows.Forms.Label();
+            this.scrollProGuitar = new System.Windows.Forms.HScrollBar();
+            this.lblGuitarDiff = new System.Windows.Forms.Label();
+            this.scrollGuitar = new System.Windows.Forms.HScrollBar();
+            this.lblProBassDiff = new System.Windows.Forms.Label();
+            this.scrollProBass = new System.Windows.Forms.HScrollBar();
+            this.lblBassDiff = new System.Windows.Forms.Label();
+            this.scrollBass = new System.Windows.Forms.HScrollBar();
+            this.lblDrumsDiff = new System.Windows.Forms.Label();
+            this.scrollDrums = new System.Windows.Forms.HScrollBar();
             this.PictureBandDifficulty6 = new System.Windows.Forms.PictureBox();
             this.PictureProKeysDifficulty6 = new System.Windows.Forms.PictureBox();
             this.PictureBandDifficulty5 = new System.Windows.Forms.PictureBox();
@@ -650,24 +668,6 @@ namespace MagmaRokOn
             this.panel12 = new System.Windows.Forms.Panel();
             this.PlaybackTimer = new System.Windows.Forms.Timer(this.components);
             this.updater = new System.ComponentModel.BackgroundWorker();
-            this.scrollDrums = new System.Windows.Forms.HScrollBar();
-            this.lblDrumsDiff = new System.Windows.Forms.Label();
-            this.scrollBass = new System.Windows.Forms.HScrollBar();
-            this.lblBassDiff = new System.Windows.Forms.Label();
-            this.scrollProBass = new System.Windows.Forms.HScrollBar();
-            this.lblProBassDiff = new System.Windows.Forms.Label();
-            this.scrollGuitar = new System.Windows.Forms.HScrollBar();
-            this.lblGuitarDiff = new System.Windows.Forms.Label();
-            this.scrollProGuitar = new System.Windows.Forms.HScrollBar();
-            this.lblProGuitarDiff = new System.Windows.Forms.Label();
-            this.scrollVocals = new System.Windows.Forms.HScrollBar();
-            this.lblVocalsDiff = new System.Windows.Forms.Label();
-            this.scrollKeys = new System.Windows.Forms.HScrollBar();
-            this.lblKeysDiff = new System.Windows.Forms.Label();
-            this.scrollProKeys = new System.Windows.Forms.HScrollBar();
-            this.lblProKeysDiff = new System.Windows.Forms.Label();
-            this.scrollBand = new System.Windows.Forms.HScrollBar();
-            this.lblBandDiff = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.TopLevelTabs.SuspendLayout();
             this.TabPageInformation.SuspendLayout();
@@ -6411,6 +6411,213 @@ namespace MagmaRokOn
             this.GroupBoxDifficulty.TabStop = false;
             this.GroupBoxDifficulty.Text = "Difficulty";
             // 
+            // lblBandDiff
+            // 
+            this.lblBandDiff.BackColor = System.Drawing.Color.White;
+            this.lblBandDiff.ForeColor = System.Drawing.Color.Black;
+            this.lblBandDiff.Location = new System.Drawing.Point(220, 331);
+            this.lblBandDiff.Name = "lblBandDiff";
+            this.lblBandDiff.Size = new System.Drawing.Size(30, 16);
+            this.lblBandDiff.TabIndex = 141;
+            this.lblBandDiff.Text = "0";
+            this.lblBandDiff.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ToolTip.SetToolTip(this.lblBandDiff, "Band Difficulty");
+            // 
+            // scrollBand
+            // 
+            this.scrollBand.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.scrollBand.LargeChange = 1;
+            this.scrollBand.Location = new System.Drawing.Point(104, 331);
+            this.scrollBand.Maximum = 580;
+            this.scrollBand.Name = "scrollBand";
+            this.scrollBand.Size = new System.Drawing.Size(105, 16);
+            this.scrollBand.TabIndex = 140;
+            this.scrollBand.ValueChanged += new System.EventHandler(this.scrollBand_ValueChanged);
+            // 
+            // lblProKeysDiff
+            // 
+            this.lblProKeysDiff.BackColor = System.Drawing.Color.White;
+            this.lblProKeysDiff.ForeColor = System.Drawing.Color.Black;
+            this.lblProKeysDiff.Location = new System.Drawing.Point(220, 294);
+            this.lblProKeysDiff.Name = "lblProKeysDiff";
+            this.lblProKeysDiff.Size = new System.Drawing.Size(30, 16);
+            this.lblProKeysDiff.TabIndex = 139;
+            this.lblProKeysDiff.Text = "0";
+            this.lblProKeysDiff.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ToolTip.SetToolTip(this.lblProKeysDiff, "Pro Keys Difficulty");
+            // 
+            // scrollProKeys
+            // 
+            this.scrollProKeys.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.scrollProKeys.LargeChange = 1;
+            this.scrollProKeys.Location = new System.Drawing.Point(104, 294);
+            this.scrollProKeys.Maximum = 505;
+            this.scrollProKeys.Name = "scrollProKeys";
+            this.scrollProKeys.Size = new System.Drawing.Size(105, 16);
+            this.scrollProKeys.TabIndex = 138;
+            this.scrollProKeys.ValueChanged += new System.EventHandler(this.scrollProKeys_ValueChanged);
+            // 
+            // lblKeysDiff
+            // 
+            this.lblKeysDiff.BackColor = System.Drawing.Color.White;
+            this.lblKeysDiff.ForeColor = System.Drawing.Color.Black;
+            this.lblKeysDiff.Location = new System.Drawing.Point(220, 256);
+            this.lblKeysDiff.Name = "lblKeysDiff";
+            this.lblKeysDiff.Size = new System.Drawing.Size(30, 16);
+            this.lblKeysDiff.TabIndex = 137;
+            this.lblKeysDiff.Text = "0";
+            this.lblKeysDiff.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ToolTip.SetToolTip(this.lblKeysDiff, "Keys Difficulty");
+            // 
+            // scrollKeys
+            // 
+            this.scrollKeys.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.scrollKeys.LargeChange = 1;
+            this.scrollKeys.Location = new System.Drawing.Point(104, 256);
+            this.scrollKeys.Maximum = 500;
+            this.scrollKeys.Name = "scrollKeys";
+            this.scrollKeys.Size = new System.Drawing.Size(105, 16);
+            this.scrollKeys.TabIndex = 136;
+            this.scrollKeys.ValueChanged += new System.EventHandler(this.scrollKeys_ValueChanged);
+            // 
+            // lblVocalsDiff
+            // 
+            this.lblVocalsDiff.BackColor = System.Drawing.Color.White;
+            this.lblVocalsDiff.ForeColor = System.Drawing.Color.Black;
+            this.lblVocalsDiff.Location = new System.Drawing.Point(220, 219);
+            this.lblVocalsDiff.Name = "lblVocalsDiff";
+            this.lblVocalsDiff.Size = new System.Drawing.Size(30, 16);
+            this.lblVocalsDiff.TabIndex = 135;
+            this.lblVocalsDiff.Text = "0";
+            this.lblVocalsDiff.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ToolTip.SetToolTip(this.lblVocalsDiff, "Vocals Difficulty");
+            // 
+            // scrollVocals
+            // 
+            this.scrollVocals.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.scrollVocals.LargeChange = 1;
+            this.scrollVocals.Location = new System.Drawing.Point(104, 219);
+            this.scrollVocals.Maximum = 525;
+            this.scrollVocals.Name = "scrollVocals";
+            this.scrollVocals.Size = new System.Drawing.Size(105, 16);
+            this.scrollVocals.TabIndex = 134;
+            this.scrollVocals.ValueChanged += new System.EventHandler(this.scrollVocals_ValueChanged);
+            // 
+            // lblProGuitarDiff
+            // 
+            this.lblProGuitarDiff.BackColor = System.Drawing.Color.White;
+            this.lblProGuitarDiff.ForeColor = System.Drawing.Color.Black;
+            this.lblProGuitarDiff.Location = new System.Drawing.Point(220, 182);
+            this.lblProGuitarDiff.Name = "lblProGuitarDiff";
+            this.lblProGuitarDiff.Size = new System.Drawing.Size(30, 16);
+            this.lblProGuitarDiff.TabIndex = 133;
+            this.lblProGuitarDiff.Text = "0";
+            this.lblProGuitarDiff.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ToolTip.SetToolTip(this.lblProGuitarDiff, "Pro Guitar Difficulty");
+            // 
+            // scrollProGuitar
+            // 
+            this.scrollProGuitar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.scrollProGuitar.LargeChange = 1;
+            this.scrollProGuitar.Location = new System.Drawing.Point(104, 182);
+            this.scrollProGuitar.Maximum = 600;
+            this.scrollProGuitar.Name = "scrollProGuitar";
+            this.scrollProGuitar.Size = new System.Drawing.Size(105, 16);
+            this.scrollProGuitar.TabIndex = 132;
+            this.scrollProGuitar.ValueChanged += new System.EventHandler(this.scrollProGuitar_ValueChanged);
+            // 
+            // lblGuitarDiff
+            // 
+            this.lblGuitarDiff.BackColor = System.Drawing.Color.White;
+            this.lblGuitarDiff.ForeColor = System.Drawing.Color.Black;
+            this.lblGuitarDiff.Location = new System.Drawing.Point(220, 145);
+            this.lblGuitarDiff.Name = "lblGuitarDiff";
+            this.lblGuitarDiff.Size = new System.Drawing.Size(30, 16);
+            this.lblGuitarDiff.TabIndex = 131;
+            this.lblGuitarDiff.Text = "0";
+            this.lblGuitarDiff.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ToolTip.SetToolTip(this.lblGuitarDiff, "Guitar Difficulty");
+            // 
+            // scrollGuitar
+            // 
+            this.scrollGuitar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.scrollGuitar.LargeChange = 1;
+            this.scrollGuitar.Location = new System.Drawing.Point(104, 145);
+            this.scrollGuitar.Maximum = 605;
+            this.scrollGuitar.Name = "scrollGuitar";
+            this.scrollGuitar.Size = new System.Drawing.Size(105, 16);
+            this.scrollGuitar.TabIndex = 130;
+            this.scrollGuitar.ValueChanged += new System.EventHandler(this.scrollGuitar_ValueChanged);
+            // 
+            // lblProBassDiff
+            // 
+            this.lblProBassDiff.BackColor = System.Drawing.Color.White;
+            this.lblProBassDiff.ForeColor = System.Drawing.Color.Black;
+            this.lblProBassDiff.Location = new System.Drawing.Point(220, 108);
+            this.lblProBassDiff.Name = "lblProBassDiff";
+            this.lblProBassDiff.Size = new System.Drawing.Size(30, 16);
+            this.lblProBassDiff.TabIndex = 129;
+            this.lblProBassDiff.Text = "0";
+            this.lblProBassDiff.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ToolTip.SetToolTip(this.lblProBassDiff, "Pro Bass Difficulty");
+            // 
+            // scrollProBass
+            // 
+            this.scrollProBass.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.scrollProBass.LargeChange = 1;
+            this.scrollProBass.Location = new System.Drawing.Point(104, 108);
+            this.scrollProBass.Maximum = 500;
+            this.scrollProBass.Name = "scrollProBass";
+            this.scrollProBass.Size = new System.Drawing.Size(105, 16);
+            this.scrollProBass.TabIndex = 128;
+            this.scrollProBass.ValueChanged += new System.EventHandler(this.scrollProBass_ValueChanged);
+            // 
+            // lblBassDiff
+            // 
+            this.lblBassDiff.BackColor = System.Drawing.Color.White;
+            this.lblBassDiff.ForeColor = System.Drawing.Color.Black;
+            this.lblBassDiff.Location = new System.Drawing.Point(220, 71);
+            this.lblBassDiff.Name = "lblBassDiff";
+            this.lblBassDiff.Size = new System.Drawing.Size(30, 16);
+            this.lblBassDiff.TabIndex = 127;
+            this.lblBassDiff.Text = "0";
+            this.lblBassDiff.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ToolTip.SetToolTip(this.lblBassDiff, "Bass Difficulty");
+            // 
+            // scrollBass
+            // 
+            this.scrollBass.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.scrollBass.LargeChange = 1;
+            this.scrollBass.Location = new System.Drawing.Point(104, 71);
+            this.scrollBass.Maximum = 600;
+            this.scrollBass.Name = "scrollBass";
+            this.scrollBass.Size = new System.Drawing.Size(105, 16);
+            this.scrollBass.TabIndex = 126;
+            this.scrollBass.ValueChanged += new System.EventHandler(this.scrollBass_ValueChanged);
+            // 
+            // lblDrumsDiff
+            // 
+            this.lblDrumsDiff.BackColor = System.Drawing.Color.White;
+            this.lblDrumsDiff.ForeColor = System.Drawing.Color.Black;
+            this.lblDrumsDiff.Location = new System.Drawing.Point(220, 34);
+            this.lblDrumsDiff.Name = "lblDrumsDiff";
+            this.lblDrumsDiff.Size = new System.Drawing.Size(30, 16);
+            this.lblDrumsDiff.TabIndex = 125;
+            this.lblDrumsDiff.Text = "0";
+            this.lblDrumsDiff.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ToolTip.SetToolTip(this.lblDrumsDiff, "Drums Difficulty");
+            // 
+            // scrollDrums
+            // 
+            this.scrollDrums.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.scrollDrums.LargeChange = 1;
+            this.scrollDrums.Location = new System.Drawing.Point(104, 34);
+            this.scrollDrums.Maximum = 600;
+            this.scrollDrums.Name = "scrollDrums";
+            this.scrollDrums.Size = new System.Drawing.Size(105, 16);
+            this.scrollDrums.TabIndex = 124;
+            this.scrollDrums.ValueChanged += new System.EventHandler(this.scrollDrums_ValueChanged);
+            // 
             // PictureBandDifficulty6
             // 
             this.PictureBandDifficulty6.Location = new System.Drawing.Point(178, 315);
@@ -8325,213 +8532,6 @@ namespace MagmaRokOn
             this.updater.WorkerSupportsCancellation = true;
             this.updater.DoWork += new System.ComponentModel.DoWorkEventHandler(this.updater_DoWork);
             this.updater.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.updater_RunWorkerCompleted);
-            // 
-            // scrollDrums
-            // 
-            this.scrollDrums.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.scrollDrums.LargeChange = 1;
-            this.scrollDrums.Location = new System.Drawing.Point(104, 34);
-            this.scrollDrums.Maximum = 448;
-            this.scrollDrums.Name = "scrollDrums";
-            this.scrollDrums.Size = new System.Drawing.Size(105, 16);
-            this.scrollDrums.TabIndex = 124;
-            this.scrollDrums.ValueChanged += new System.EventHandler(this.scrollDrums_ValueChanged);
-            // 
-            // lblDrumsDiff
-            // 
-            this.lblDrumsDiff.BackColor = System.Drawing.Color.White;
-            this.lblDrumsDiff.ForeColor = System.Drawing.Color.Black;
-            this.lblDrumsDiff.Location = new System.Drawing.Point(220, 34);
-            this.lblDrumsDiff.Name = "lblDrumsDiff";
-            this.lblDrumsDiff.Size = new System.Drawing.Size(30, 16);
-            this.lblDrumsDiff.TabIndex = 125;
-            this.lblDrumsDiff.Text = "0";
-            this.lblDrumsDiff.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.ToolTip.SetToolTip(this.lblDrumsDiff, "Drums Difficulty");
-            // 
-            // scrollBass
-            // 
-            this.scrollBass.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.scrollBass.LargeChange = 1;
-            this.scrollBass.Location = new System.Drawing.Point(104, 71);
-            this.scrollBass.Maximum = 436;
-            this.scrollBass.Name = "scrollBass";
-            this.scrollBass.Size = new System.Drawing.Size(105, 16);
-            this.scrollBass.TabIndex = 126;
-            this.scrollBass.ValueChanged += new System.EventHandler(this.scrollBass_ValueChanged);
-            // 
-            // lblBassDiff
-            // 
-            this.lblBassDiff.BackColor = System.Drawing.Color.White;
-            this.lblBassDiff.ForeColor = System.Drawing.Color.Black;
-            this.lblBassDiff.Location = new System.Drawing.Point(220, 71);
-            this.lblBassDiff.Name = "lblBassDiff";
-            this.lblBassDiff.Size = new System.Drawing.Size(30, 16);
-            this.lblBassDiff.TabIndex = 127;
-            this.lblBassDiff.Text = "0";
-            this.lblBassDiff.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.ToolTip.SetToolTip(this.lblBassDiff, "Bass Difficulty");
-            // 
-            // scrollProBass
-            // 
-            this.scrollProBass.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.scrollProBass.LargeChange = 1;
-            this.scrollProBass.Location = new System.Drawing.Point(104, 108);
-            this.scrollProBass.Maximum = 442;
-            this.scrollProBass.Name = "scrollProBass";
-            this.scrollProBass.Size = new System.Drawing.Size(105, 16);
-            this.scrollProBass.TabIndex = 128;
-            this.scrollProBass.ValueChanged += new System.EventHandler(this.scrollProBass_ValueChanged);
-            // 
-            // lblProBassDiff
-            // 
-            this.lblProBassDiff.BackColor = System.Drawing.Color.White;
-            this.lblProBassDiff.ForeColor = System.Drawing.Color.Black;
-            this.lblProBassDiff.Location = new System.Drawing.Point(220, 108);
-            this.lblProBassDiff.Name = "lblProBassDiff";
-            this.lblProBassDiff.Size = new System.Drawing.Size(30, 16);
-            this.lblProBassDiff.TabIndex = 129;
-            this.lblProBassDiff.Text = "0";
-            this.lblProBassDiff.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.ToolTip.SetToolTip(this.lblProBassDiff, "Pro Bass Difficulty");
-            // 
-            // scrollGuitar
-            // 
-            this.scrollGuitar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.scrollGuitar.LargeChange = 1;
-            this.scrollGuitar.Location = new System.Drawing.Point(104, 145);
-            this.scrollGuitar.Maximum = 409;
-            this.scrollGuitar.Name = "scrollGuitar";
-            this.scrollGuitar.Size = new System.Drawing.Size(105, 16);
-            this.scrollGuitar.TabIndex = 130;
-            this.scrollGuitar.ValueChanged += new System.EventHandler(this.scrollGuitar_ValueChanged);
-            // 
-            // lblGuitarDiff
-            // 
-            this.lblGuitarDiff.BackColor = System.Drawing.Color.White;
-            this.lblGuitarDiff.ForeColor = System.Drawing.Color.Black;
-            this.lblGuitarDiff.Location = new System.Drawing.Point(220, 145);
-            this.lblGuitarDiff.Name = "lblGuitarDiff";
-            this.lblGuitarDiff.Size = new System.Drawing.Size(30, 16);
-            this.lblGuitarDiff.TabIndex = 131;
-            this.lblGuitarDiff.Text = "0";
-            this.lblGuitarDiff.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.ToolTip.SetToolTip(this.lblGuitarDiff, "Guitar Difficulty");
-            // 
-            // scrollProGuitar
-            // 
-            this.scrollProGuitar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.scrollProGuitar.LargeChange = 1;
-            this.scrollProGuitar.Location = new System.Drawing.Point(104, 182);
-            this.scrollProGuitar.Maximum = 442;
-            this.scrollProGuitar.Name = "scrollProGuitar";
-            this.scrollProGuitar.Size = new System.Drawing.Size(105, 16);
-            this.scrollProGuitar.TabIndex = 132;
-            this.scrollProGuitar.ValueChanged += new System.EventHandler(this.scrollProGuitar_ValueChanged);
-            // 
-            // lblProGuitarDiff
-            // 
-            this.lblProGuitarDiff.BackColor = System.Drawing.Color.White;
-            this.lblProGuitarDiff.ForeColor = System.Drawing.Color.Black;
-            this.lblProGuitarDiff.Location = new System.Drawing.Point(220, 182);
-            this.lblProGuitarDiff.Name = "lblProGuitarDiff";
-            this.lblProGuitarDiff.Size = new System.Drawing.Size(30, 16);
-            this.lblProGuitarDiff.TabIndex = 133;
-            this.lblProGuitarDiff.Text = "0";
-            this.lblProGuitarDiff.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.ToolTip.SetToolTip(this.lblProGuitarDiff, "Pro Guitar Difficulty");
-            // 
-            // scrollVocals
-            // 
-            this.scrollVocals.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.scrollVocals.LargeChange = 1;
-            this.scrollVocals.Location = new System.Drawing.Point(104, 219);
-            this.scrollVocals.Maximum = 427;
-            this.scrollVocals.Name = "scrollVocals";
-            this.scrollVocals.Size = new System.Drawing.Size(105, 16);
-            this.scrollVocals.TabIndex = 134;
-            this.scrollVocals.ValueChanged += new System.EventHandler(this.scrollVocals_ValueChanged);
-            // 
-            // lblVocalsDiff
-            // 
-            this.lblVocalsDiff.BackColor = System.Drawing.Color.White;
-            this.lblVocalsDiff.ForeColor = System.Drawing.Color.Black;
-            this.lblVocalsDiff.Location = new System.Drawing.Point(220, 219);
-            this.lblVocalsDiff.Name = "lblVocalsDiff";
-            this.lblVocalsDiff.Size = new System.Drawing.Size(30, 16);
-            this.lblVocalsDiff.TabIndex = 135;
-            this.lblVocalsDiff.Text = "0";
-            this.lblVocalsDiff.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.ToolTip.SetToolTip(this.lblVocalsDiff, "Vocals Difficulty");
-            // 
-            // scrollKeys
-            // 
-            this.scrollKeys.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.scrollKeys.LargeChange = 1;
-            this.scrollKeys.Location = new System.Drawing.Point(104, 256);
-            this.scrollKeys.Maximum = 443;
-            this.scrollKeys.Name = "scrollKeys";
-            this.scrollKeys.Size = new System.Drawing.Size(105, 16);
-            this.scrollKeys.TabIndex = 136;
-            this.scrollKeys.ValueChanged += new System.EventHandler(this.scrollKeys_ValueChanged);
-            // 
-            // lblKeysDiff
-            // 
-            this.lblKeysDiff.BackColor = System.Drawing.Color.White;
-            this.lblKeysDiff.ForeColor = System.Drawing.Color.Black;
-            this.lblKeysDiff.Location = new System.Drawing.Point(220, 256);
-            this.lblKeysDiff.Name = "lblKeysDiff";
-            this.lblKeysDiff.Size = new System.Drawing.Size(30, 16);
-            this.lblKeysDiff.TabIndex = 137;
-            this.lblKeysDiff.Text = "0";
-            this.lblKeysDiff.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.ToolTip.SetToolTip(this.lblKeysDiff, "Keys Difficulty");
-            // 
-            // scrollProKeys
-            // 
-            this.scrollProKeys.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.scrollProKeys.LargeChange = 1;
-            this.scrollProKeys.Location = new System.Drawing.Point(104, 294);
-            this.scrollProKeys.Maximum = 443;
-            this.scrollProKeys.Name = "scrollProKeys";
-            this.scrollProKeys.Size = new System.Drawing.Size(105, 16);
-            this.scrollProKeys.TabIndex = 138;
-            this.scrollProKeys.ValueChanged += new System.EventHandler(this.scrollProKeys_ValueChanged);
-            // 
-            // lblProKeysDiff
-            // 
-            this.lblProKeysDiff.BackColor = System.Drawing.Color.White;
-            this.lblProKeysDiff.ForeColor = System.Drawing.Color.Black;
-            this.lblProKeysDiff.Location = new System.Drawing.Point(220, 294);
-            this.lblProKeysDiff.Name = "lblProKeysDiff";
-            this.lblProKeysDiff.Size = new System.Drawing.Size(30, 16);
-            this.lblProKeysDiff.TabIndex = 139;
-            this.lblProKeysDiff.Text = "0";
-            this.lblProKeysDiff.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.ToolTip.SetToolTip(this.lblProKeysDiff, "Pro Keys Difficulty");
-            // 
-            // scrollBand
-            // 
-            this.scrollBand.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.scrollBand.LargeChange = 1;
-            this.scrollBand.Location = new System.Drawing.Point(104, 331);
-            this.scrollBand.Maximum = 345;
-            this.scrollBand.Name = "scrollBand";
-            this.scrollBand.Size = new System.Drawing.Size(105, 16);
-            this.scrollBand.TabIndex = 140;
-            this.scrollBand.ValueChanged += new System.EventHandler(this.scrollBand_ValueChanged);
-            // 
-            // lblBandDiff
-            // 
-            this.lblBandDiff.BackColor = System.Drawing.Color.White;
-            this.lblBandDiff.ForeColor = System.Drawing.Color.Black;
-            this.lblBandDiff.Location = new System.Drawing.Point(220, 331);
-            this.lblBandDiff.Name = "lblBandDiff";
-            this.lblBandDiff.Size = new System.Drawing.Size(30, 16);
-            this.lblBandDiff.TabIndex = 141;
-            this.lblBandDiff.Text = "0";
-            this.lblBandDiff.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.ToolTip.SetToolTip(this.lblBandDiff, "Band Difficulty");
             // 
             // MainForm
             // 
