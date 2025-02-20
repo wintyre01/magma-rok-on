@@ -5200,19 +5200,14 @@ namespace MagmaRokOn
             this.cboBandFail.ForeColor = System.Drawing.Color.Black;
             this.cboBandFail.FormattingEnabled = true;
             this.cboBandFail.Items.AddRange(new object[] {
-            "band_fail_electro.cue",
-            "band_fail_electro_keys.cue",
-            "band_fail_electro_mix.cue",
-            "band_fail_hard_mix.cue",
-            "band_fail_heavy.cue",
-            "band_fail_heavy_keys.cue",
-            "band_fail_keys.cue",
-            "band_fail_rock.cue",
-            "band_fail_rock_keys.cue",
-            "band_fail_rock_mix.cue",
-            "band_fail_vintage.cue ",
-            "band_fail_vintage_keys.cue",
-            "band_fail_vintage_mix.cue"});
+            "Electronic",
+            "Electronic (Keys)",
+            "Heavy",
+            "Heavy (Keys)",
+            "Rock",
+            "Rock (Keys)",
+            "Vintage",
+            "Vintage (Keys)"});
             this.cboBandFail.Location = new System.Drawing.Point(186, 166);
             this.cboBandFail.Name = "cboBandFail";
             this.cboBandFail.Size = new System.Drawing.Size(280, 21);

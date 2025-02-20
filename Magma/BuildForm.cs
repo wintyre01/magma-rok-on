@@ -771,7 +771,18 @@ namespace MagmaRokOn
                             }
                             else if (line.Contains("encoding"))
                             {
-                                swSongsDta.WriteLine("   (band_fail_cue " + mMainForm.bandFailText + ")");
+                                var bandFails = new List<string>()
+                                {
+                                    "band_fail_electro.cue", 
+                                    "band_fail_electro_keys.cue", 
+                                    "band_fail_heavy.cue",
+                                    "band_fail_heavy_keys.cue", 
+                                    "band_fail_rock.cue", 
+                                    "band_fail_rock_keys.cue",
+                                    "band_fail_vintage.cue", 
+                                    "band_fail_vintage_keys.cue"
+                                };
+                                swSongsDta.WriteLine("   (band_fail_cue " + bandFails[mMainForm.bandFailIndex] + ")");
                                 line = "   ('encoding' '" + mMainForm.Encoding + "')";
                             }                            
                             else if (line.Contains("'tuning_offset_cents' 0.00)"))

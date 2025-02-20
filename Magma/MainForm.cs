@@ -27,7 +27,7 @@ namespace MagmaRokOn
     public partial class MainForm : Form
     {
         public string mAppTitle = "Magma: Rok On Edition v4";
-        public string mAppVersion = ".0.0";
+        public string mAppVersion = ".0.2";
         public string mDefaultAlbumArtPath;
         public string ProjectFolder;
         public string GuitarTuning = "(real_guitar_tuning (0 0 0 0 0 0))";
@@ -227,8 +227,8 @@ namespace MagmaRokOn
         private ThreadRunner mRunner;
         private ThreadSafeStringList mList;
         private PictureBox[] difficultyboxes;
-        private TextBox ActiveTextBox;
-        public string bandFailText;
+        private TextBox ActiveTextBox;        
+        public int bandFailIndex;
 
         public bool doTonality;
         public int songTonality;
@@ -1166,7 +1166,7 @@ namespace MagmaRokOn
             chkSoloBass.Checked = false;
             chkSoloKeys.Checked = false;
             chkSoloVocals.Checked = false;
-            cboBandFail.SelectedIndex = 7;
+            cboBandFail.SelectedIndex = 5;
 
             if (useSilenceTracksByDefault.Checked && use441KHzToolStripMenuItem.Checked)
             {
@@ -1219,7 +1219,7 @@ namespace MagmaRokOn
             ComboRating.SelectedIndex = 3;
 
             //disable Tonic Note
-            chkTonicNote.Checked = false;
+            //chkTonicNote.Checked = false;
 
             //set drum kit sfx to default Arena Rock
             ComboDrumSFX.SelectedIndex = 0;
@@ -1458,12 +1458,12 @@ namespace MagmaRokOn
 
             ComboVocalScroll.Enabled = @checked;
             ComboVocalGender.Enabled = @checked;
-            chkTonicNote.Enabled = @checked;
+            //chkTonicNote.Enabled = @checked;
             if (!@checked)
             {
                 ComboTonicNote.Enabled = false;
                 ComboTonicNote.SelectedIndex = -1;
-                chkTonicNote.Checked = false;
+                //chkTonicNote.Checked = false;
                 chkSoloVocals.Checked = false;
             }
             numericTuningCents.Enabled = @checked;
@@ -2465,12 +2465,27 @@ namespace MagmaRokOn
                     }
                     else if (trackname.Contains("EVENTS"))
                     {
-                        if (!(from events in songMidi.Events[i] where events.CommandCode == MidiCommandCode.MetaEvent
-                                select (MetaEvent) events).Any(eve => eve.MetaEventType == MetaEventType.TextEvent &&
-                                        eve.ToString().Contains("[music_start]") && eve.AbsoluteTime < (songMidi.DeltaTicksPerQuarterNote*2))) continue;
+                        if (!(from events in songMidi.Events[i]
+                              where events.CommandCode == MidiCommandCode.MetaEvent
+                              select (MetaEvent)events).Any(eve => eve.MetaEventType == MetaEventType.TextEvent &&
+                                      eve.ToString().Contains("[music_start]") && eve.AbsoluteTime < (songMidi.DeltaTicksPerQuarterNote * 2))) continue;
                         MessageBox.Show("The [music_start] event in EVENTS track is too early in the track\nPlease move it to the appropriate place and try again\nThis causes MagmaCompiler to go crazy and give you nonsense errors",
                             mAppTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return false;
+                    }
+                    else if (trackname.Contains("VENUE"))
+                    {
+                        var hasLightingIssue = (from events in songMidi.Events[i]
+                                                where events.CommandCode == MidiCommandCode.MetaEvent
+                                                select (MetaEvent)events).Any(eve => eve.MetaEventType == MetaEventType.TextEvent &&
+                                                        eve.ToString().Contains("[lighting ()]"));
+                        if (hasLightingIssue)
+                        {
+                            var answer = MessageBox.Show("Your MIDI file contains a [lighting ()] event in the VENUE track that will prevent" +
+                                "Magma from autogenerating a venue for your song\nAre you sure you want to compile this MIDI?", Text,
+                                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                            if (answer == DialogResult.No) return false;
+                        }
                     }
                 }
                 if (drumod < 2 && CheckDrums.Checked)
@@ -3666,7 +3681,7 @@ namespace MagmaRokOn
         {
             if (aNSIMenu.Checked)
             {
-                FileEncoding = System.Text.Encoding.GetEncoding(1252);
+                FileEncoding = System.Text.Encoding.GetEncoding(28591);
                 Encoding = "latin1";
             }
             else
@@ -3745,6 +3760,7 @@ namespace MagmaRokOn
            if (SongPreview != 0)
            {
                sw.WriteLine("SongPreview=" + SongPreview);
+                sw.WriteLine("SongPreviewEnd=" + PreviewEnd);
            }
            sw.WriteLine("CheckTempoMap=" + chkTempo.Checked);
            sw.WriteLine("WiiMode=" + wiiConversion.Checked);
@@ -3960,6 +3976,11 @@ namespace MagmaRokOn
                        ProjectFile.PreviewStart = SongPreview > 570000 ? 570000 : (int)SongPreview;
                        UpdateSongPreview();
                    }
+                   else if (line.Contains("SongPreviewEnd="))
+                    {
+                        PreviewEnd = Convert.ToInt64(Tools.GetConfigString(line));
+                        UpdateSongPreview();
+                    }
                    else if (line.Contains("Song="))
                    {
                        var song = Tools.GetConfigString(line);
@@ -6069,7 +6090,7 @@ namespace MagmaRokOn
             chkProKeys.Checked = false;
             chkProBass.Checked = false;
             chkProGuitar.Checked = false;
-            chkTonicNote.Checked = false;
+            //chkTonicNote.Checked = false;
             CheckBoxFromAlbum.Checked = false;
 
             var song = Parser.Songs[0];
@@ -7297,7 +7318,7 @@ namespace MagmaRokOn
             }
             var num3 = (num2 * 60) + num1;
             SongPreview = (num3 * 1000) + (int)numericMilliseconds.Value; //we'll use this when converting to CON
-
+            
             if (num3 < mSongLength - 30)
             {
                 if (SongPreview > 570000) //magmacompiler won't accept a number bigger than 9 minutes 30 seconds
@@ -7376,12 +7397,29 @@ namespace MagmaRokOn
 
         private void UpdateSongPreview()
         {
-            var time = SongPreview / 1000;
-            NumericPreviewMins.Value = time / 60;
-            var secs = "00" + (time - (NumericPreviewMins.Value * 60)).ToString(CultureInfo.InvariantCulture);
-            DomainPreviewSecs.Text = secs.Substring(secs.Length - 2, 2);
-            var milliseconds = SongPreview.ToString(CultureInfo.InvariantCulture).Substring(SongPreview.ToString(CultureInfo.InvariantCulture).Length - 3, 3);
-            numericMilliseconds.Value = Convert.ToInt32(milliseconds);
+            try
+            {
+                var time = SongPreview / 1000;
+                NumericPreviewMins.Value = time / 60;
+                var secs = "00" + (time - (NumericPreviewMins.Value * 60)).ToString(CultureInfo.InvariantCulture);
+                DomainPreviewSecs.Text = secs.Substring(secs.Length - 2, 2);
+                var milliseconds = SongPreview.ToString(CultureInfo.InvariantCulture).Substring(SongPreview.ToString(CultureInfo.InvariantCulture).Length - 3, 3);
+                numericMilliseconds.Value = Convert.ToInt32(milliseconds);
+            }
+            catch
+            { }
+
+            try
+            {
+                var time = PreviewEnd / 1000;
+                prevEndMinutes.Value = time / 60;
+                var secs = "00" + (time - (prevEndMinutes.Value * 60)).ToString(CultureInfo.InvariantCulture);
+                prevEndSeconds.Text = secs.Substring(secs.Length - 2, 2);
+                var milliseconds = PreviewEnd.ToString(CultureInfo.InvariantCulture).Substring(PreviewEnd.ToString(CultureInfo.InvariantCulture).Length - 3, 3);
+                prevEndMilliseconds.Value = Convert.ToInt32(milliseconds);
+            }
+            catch
+            { }
         }
 
         private void TextBoxAlbumArt_TextChanged(object sender, EventArgs e)
@@ -10584,7 +10622,7 @@ namespace MagmaRokOn
         private void cboBandFail_SelectedIndexChanged(object sender, EventArgs e)
         {
             RefreshWindowTitle();
-            bandFailText = cboBandFail.Items[cboBandFail.SelectedIndex].ToString();
+            bandFailIndex = cboBandFail.SelectedIndex;
         }
 
         private void chkUnpitched_CheckedChanged(object sender, EventArgs e)
