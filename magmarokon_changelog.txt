@@ -7,6 +7,30 @@ Modified by TrojanNemo 2013-2015, FujiSkunk 2019-2024, TrojanNemo 2025-Present
 
 FEATURES / CHANGE LOG:
 
+v4.0.2
+CHANGES
+- Fine tuned the band fail mix cues to remove unnecessary duplicates and rename the remaining ones to something more legible while ensuring it still works when writing to the DTA
+- Added check for erroneous [lighting ()] event in the VENUE track, which prevents any lighting cues from autogenerating when compiling the song
+- Enabled Vocal Tonic Note to be used at any time, with or without vocals, as it can be used with pro instruments as well
+- Included Linos' modified ark file which allows Expert+ notes to pass MIDI verification
+
+FIXES
+- Fixed song preview end information not saving to the companion .rok file and not being processed upon loading even if it was manually added
+
+----------
+
+v4.0.1
+FIXES
+- Fixed major game breaking bug that would generate double 'rank' entry in the songs.dta file
+- Restored ability to read extra metadata stored in .c3 files that accompany project files
+- Now when loading project the difficulty slider automatically gets the difficulty for each instrument without having to click on the pips
+
+NEW FEATURES
+- Now should allow for custom sections that use the [section format - thanks to Linos
+- Changed instrument maximum values from max tier threshold to maximum observed values - thanks to ataeaf
+
+----------
+
 v4.0.0
 
 C3 forums and website are gone, but the spirit of music rocks on...with the change in maintainer back to TrojanNemo after 10 years (thanks so much FujiSkunk!), it's time for a name and UI change. So here comes Magma: Rok On Edition!
@@ -31,6 +55,7 @@ NEW FEATURES
 - Added Unpitched Vocals button + tag that will be saved to the DTA file - this will be recognized by upcoming Nautilus release (for Visualizer) and hopefully other tools and websites
 - [EXPERIMENTAL] Added additional animation speeds (24 and 48) as previously requested by atruejedi - if I got this backwards or doesn't work, please report it
 - [EXPERIMENTAL] Added ability to specify song preview end, rather than assume a fixed 30 seconds - this will work fine in Magma but I don't know if it will work in game - you tell me!
+- [EXPERIMENTAL] Added option to fine tune instrument difficulty - the number you see in the box is the number that Magma will assign to that instrument in the DTA file
 - Added option to add the author name directly to the DTA array for compatibility with RB3DX and similar projects
 - Added option to remove the subgenre entry from the DTA array
 - Now reads author tag from DTA array when importing a CON file (before it would ignore it)
@@ -434,7 +459,7 @@ v1.3.4
 - Added ADVANCED options to override all files in the final CON: select the option under ADVANCED settings and any *.mogg, *.milo_xbox or *.png_xbox file in the same directory as the Magma (.rbproj) project will be replaced into the final CON. Since you're likely to have the original midi in the project directory, to override the MIDI name the new MIDI file "override.mid" and put that in the same directory as the Magma project. If you don't know what you would use these features for, please DO NOT USE THEM.
 - Added option to add the correct drum mix events to your MIDI by default. If mix events are already present they are replaced. Enabled by default but can be disabled/enabled on a song-by-song basis. Strongly recommend leaving this enabled - no more drum mix headaches!
 - Greatly improved the drum mix algorithm to more accurately find the correct drum mix
-- Added ability to compile using special characters äëïöü
+- Added ability to compile using special characters Ã¤Ã«Ã¯Ã¶Ã¼
 - Added Copy and Paste to the context menu for the audio files
 - Enabled context menu on the Backing, Crowd and Dry Vocals text boxes
 - Added "Wii conversion" option under 'Import CON/LIVE file" - Enable this and the settings will be set to the optimal values for the Wii (set Encoding Quality to 3, disable Crowd Audio, add "_wii" to the song id, populate the dry vox fields with blank files, and you get a button to send directly to the Wii Converter after the song is compiled) - The option persists so if you only use Magma to import and fix songs for Wii conversion, you don't have to re-select this option.
@@ -511,7 +536,7 @@ v1.3.0
 ----------
 
 v1.2.3
-- fixed bug that would prevent songs from compiling where the artist, song title or album included the y-umlaut character (ÿ)
+- fixed bug that would prevent songs from compiling where the artist, song title or album included the y-umlaut character (Ã¿)
 - fixed bug where if MagmaCompilerC3 wasn't present, Magma would crash rather than let you know - now prompts to find it
 - improved selection of UTF8 encoding - before it would tell you to select it, now Magma will select it automatically
 - improved how Magma will handle the Artist, Song Title and Album Name in general, bypassing MagmaCompiler's restrictions
@@ -637,7 +662,7 @@ v1.0
 THE FOLLOWING ADDITIONAL OPTIONS WILL BE SAVED IN A .C3 FILE AND WILL BE IN THE CON FILE. BUT NOT IN THE RBA FILE (I.E. NOT IN AUDITION MODE).
 
 - added option to specify custom song id (under Options menu)
-- added option to specify encoding (use UTF8 for songs with accented names like Michael Bublé or special characters like Queensrÿche)
+- added option to specify encoding (use UTF8 for songs with accented names like Michael BublÃ© or special characters like QueensrÃ¿che)
 - added option to check/uncheck whether song is a master (default is checked, uncheck for cover)
 - added option to select pro guitar / pro bass difficulty tiers visually (like other instruments)
 - added option to enter pro guitar/ pro bass tuning information
