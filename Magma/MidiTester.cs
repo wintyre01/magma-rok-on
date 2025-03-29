@@ -439,7 +439,7 @@ namespace MagmaRokOn
             ProjectFile.TuningOffset = 0;
             ProjectFile.Tempo = 32;
             ProjectFile.ScrollSpeed = 2300;
-            ProjectFile.GuidePitchVolume = -3;
+            ProjectFile.GuidePitchVolume = 0;
             ProjectFile.AutogenTheme = "FeelGoodPopRock.rbtheme";
             HasProBass = false;
             HasProGuitar = false;

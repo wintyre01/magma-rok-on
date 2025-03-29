@@ -6423,7 +6423,7 @@ namespace MagmaRokOn
             this.scrollBand.Cursor = System.Windows.Forms.Cursors.Hand;
             this.scrollBand.LargeChange = 1;
             this.scrollBand.Location = new System.Drawing.Point(104, 331);
-            this.scrollBand.Maximum = 580;
+            this.scrollBand.Maximum = 999;
             this.scrollBand.Name = "scrollBand";
             this.scrollBand.Size = new System.Drawing.Size(105, 16);
             this.scrollBand.TabIndex = 140;
@@ -6446,7 +6446,7 @@ namespace MagmaRokOn
             this.scrollProKeys.Cursor = System.Windows.Forms.Cursors.Hand;
             this.scrollProKeys.LargeChange = 1;
             this.scrollProKeys.Location = new System.Drawing.Point(104, 294);
-            this.scrollProKeys.Maximum = 505;
+            this.scrollProKeys.Maximum = 999;
             this.scrollProKeys.Name = "scrollProKeys";
             this.scrollProKeys.Size = new System.Drawing.Size(105, 16);
             this.scrollProKeys.TabIndex = 138;
@@ -6469,7 +6469,7 @@ namespace MagmaRokOn
             this.scrollKeys.Cursor = System.Windows.Forms.Cursors.Hand;
             this.scrollKeys.LargeChange = 1;
             this.scrollKeys.Location = new System.Drawing.Point(104, 256);
-            this.scrollKeys.Maximum = 500;
+            this.scrollKeys.Maximum = 999;
             this.scrollKeys.Name = "scrollKeys";
             this.scrollKeys.Size = new System.Drawing.Size(105, 16);
             this.scrollKeys.TabIndex = 136;
@@ -6492,7 +6492,7 @@ namespace MagmaRokOn
             this.scrollVocals.Cursor = System.Windows.Forms.Cursors.Hand;
             this.scrollVocals.LargeChange = 1;
             this.scrollVocals.Location = new System.Drawing.Point(104, 219);
-            this.scrollVocals.Maximum = 525;
+            this.scrollVocals.Maximum = 999;
             this.scrollVocals.Name = "scrollVocals";
             this.scrollVocals.Size = new System.Drawing.Size(105, 16);
             this.scrollVocals.TabIndex = 134;
@@ -6515,7 +6515,7 @@ namespace MagmaRokOn
             this.scrollProGuitar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.scrollProGuitar.LargeChange = 1;
             this.scrollProGuitar.Location = new System.Drawing.Point(104, 182);
-            this.scrollProGuitar.Maximum = 600;
+            this.scrollProGuitar.Maximum = 999;
             this.scrollProGuitar.Name = "scrollProGuitar";
             this.scrollProGuitar.Size = new System.Drawing.Size(105, 16);
             this.scrollProGuitar.TabIndex = 132;
@@ -6538,7 +6538,7 @@ namespace MagmaRokOn
             this.scrollGuitar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.scrollGuitar.LargeChange = 1;
             this.scrollGuitar.Location = new System.Drawing.Point(104, 145);
-            this.scrollGuitar.Maximum = 605;
+            this.scrollGuitar.Maximum = 999;
             this.scrollGuitar.Name = "scrollGuitar";
             this.scrollGuitar.Size = new System.Drawing.Size(105, 16);
             this.scrollGuitar.TabIndex = 130;
@@ -6561,7 +6561,7 @@ namespace MagmaRokOn
             this.scrollProBass.Cursor = System.Windows.Forms.Cursors.Hand;
             this.scrollProBass.LargeChange = 1;
             this.scrollProBass.Location = new System.Drawing.Point(104, 108);
-            this.scrollProBass.Maximum = 500;
+            this.scrollProBass.Maximum = 999;
             this.scrollProBass.Name = "scrollProBass";
             this.scrollProBass.Size = new System.Drawing.Size(105, 16);
             this.scrollProBass.TabIndex = 128;
@@ -6584,7 +6584,7 @@ namespace MagmaRokOn
             this.scrollBass.Cursor = System.Windows.Forms.Cursors.Hand;
             this.scrollBass.LargeChange = 1;
             this.scrollBass.Location = new System.Drawing.Point(104, 71);
-            this.scrollBass.Maximum = 600;
+            this.scrollBass.Maximum = 999;
             this.scrollBass.Name = "scrollBass";
             this.scrollBass.Size = new System.Drawing.Size(105, 16);
             this.scrollBass.TabIndex = 126;
@@ -6607,7 +6607,7 @@ namespace MagmaRokOn
             this.scrollDrums.Cursor = System.Windows.Forms.Cursors.Hand;
             this.scrollDrums.LargeChange = 1;
             this.scrollDrums.Location = new System.Drawing.Point(104, 34);
-            this.scrollDrums.Maximum = 600;
+            this.scrollDrums.Maximum = 999;
             this.scrollDrums.Name = "scrollDrums";
             this.scrollDrums.Size = new System.Drawing.Size(105, 16);
             this.scrollDrums.TabIndex = 124;

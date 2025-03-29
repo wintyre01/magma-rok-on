@@ -980,12 +980,12 @@ namespace MagmaRokOn
         /// <returns></returns>
         public int VocalsDiff(int diff)
         {
-            Diff1 = 132;
-            Diff2 = 175;
-            Diff3 = 218;
-            Diff4 = 279;
-            Diff5 = 353;
-            Diff6 = 427;
+            Diff1 = 131;
+            Diff2 = 171;
+            Diff3 = 211;
+            Diff4 = 271;
+            Diff5 = 341;
+            Diff6 = 401;
             return doDifficulty(diff);
         }
 
@@ -1018,12 +1018,12 @@ namespace MagmaRokOn
         /// <returns></returns>
         public int ProKeysDiff(int diff)
         {
-            Diff1 = 153;
-            Diff2 = 211;
-            Diff3 = 269;
-            Diff4 = 327;
-            Diff5 = 385;
-            Diff6 = 443;
+            Diff1 = 131;
+            Diff2 = 171;
+            Diff3 = 211;
+            Diff4 = 271;
+            Diff5 = 341;
+            Diff6 = 401;
             return doDifficulty(diff);
         }
 
@@ -1056,12 +1056,12 @@ namespace MagmaRokOn
         /// <returns></returns>
         public int KeysDiff(int diff)
         {
-            Diff1 = 153;
-            Diff2 = 211;
-            Diff3 = 269;
-            Diff4 = 327;
-            Diff5 = 385;
-            Diff6 = 443;
+            Diff1 = 131;
+            Diff2 = 171;
+            Diff3 = 211;
+            Diff4 = 271;
+            Diff5 = 341;
+            Diff6 = 401;
             return doDifficulty(diff);
         }
 
@@ -1094,12 +1094,12 @@ namespace MagmaRokOn
         /// <returns></returns>
         public int DrumDiff(int diff)
         {
-            Diff1 = 124;
-            Diff2 = 151;
-            Diff3 = 178;
-            Diff4 = 242;
-            Diff5 = 345;
-            Diff6 = 448;
+            Diff1 = 131;
+            Diff2 = 171;
+            Diff3 = 211;
+            Diff4 = 271;
+            Diff5 = 341;
+            Diff6 = 401;
             return doDifficulty(diff);
         }
 
@@ -1132,12 +1132,12 @@ namespace MagmaRokOn
         /// <returns></returns>
         public int BassDiff(int diff)
         {
-            Diff1 = 135;
-            Diff2 = 181;
-            Diff3 = 228;
-            Diff4 = 293;
-            Diff5 = 364;
-            Diff6 = 436;
+            Diff1 = 131;
+            Diff2 = 171;
+            Diff3 = 211;
+            Diff4 = 271;
+            Diff5 = 341;
+            Diff6 = 401;
             return doDifficulty(diff);
         }
 
@@ -1170,12 +1170,12 @@ namespace MagmaRokOn
         /// <returns></returns>
         public int ProBassDiff(int diff)
         {
-            Diff1 = 150;
-            Diff2 = 208;
-            Diff3 = 267;
-            Diff4 = 325;
-            Diff5 = 384;
-            Diff6 = 442;
+            Diff1 = 131;
+            Diff2 = 171;
+            Diff3 = 211;
+            Diff4 = 271;
+            Diff5 = 341;
+            Diff6 = 401;
             return doDifficulty(diff);
         }
 
@@ -1208,12 +1208,12 @@ namespace MagmaRokOn
         /// <returns></returns>
         public int GuitarDiff(int diff)
         {
-            Diff1 = 139;
-            Diff2 = 176;
-            Diff3 = 221;
-            Diff4 = 267;
-            Diff5 = 333;
-            Diff6 = 409;
+            Diff1 = 131;
+            Diff2 = 171;
+            Diff3 = 211;
+            Diff4 = 271;
+            Diff5 = 341;
+            Diff6 = 401;
             return doDifficulty(diff);
         }
 
@@ -1246,12 +1246,12 @@ namespace MagmaRokOn
         /// <returns></returns>
         public int ProGuitarDiff(int diff)
         {
-            Diff1 = 150;
-            Diff2 = 208;
-            Diff3 = 267;
-            Diff4 = 325;
-            Diff5 = 384;
-            Diff6 = 442;
+            Diff1 = 131;
+            Diff2 = 171;
+            Diff3 = 211;
+            Diff4 = 271;
+            Diff5 = 341;
+            Diff6 = 401;
             return doDifficulty(diff);
         }
 
@@ -1284,12 +1284,12 @@ namespace MagmaRokOn
         /// <returns></returns>
         public int BandDiff(int diff)
         {
-            Diff1 = 165;
-            Diff2 = 215;
-            Diff3 = 243;
-            Diff4 = 267;
-            Diff5 = 292;
-            Diff6 = 345;
+            Diff1 = 131;
+            Diff2 = 171;
+            Diff3 = 211;
+            Diff4 = 271;
+            Diff5 = 341;
+            Diff6 = 401;
             return doDifficulty(diff);
         }
 
@@ -1914,7 +1914,7 @@ namespace MagmaRokOn
 
         public decimal GetGuidePitch(string line)
         {
-            var pitch = (decimal)-3.0;
+            var pitch = (decimal)0.0;
 
             var volume = line.Replace("guide_pitch_volume", "");
             volume = volume.Replace("'", "");
@@ -2153,10 +2153,10 @@ namespace MagmaRokOn
             ChannelsTotal = 0;
             HopoThreshold = 170;
             MuteVolume = -96;
-            MuteVolumeVocals = -12;
+            MuteVolumeVocals = -96;
             TuningCents = 0;
             AnimTempo = 0;
-            GuidePitch = (decimal)-3.0;
+            GuidePitch = (decimal)0.0;
             Master = false;
             DoNotExport = false;
             RB3Version = false;

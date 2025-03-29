@@ -114,7 +114,7 @@ namespace MagmaRokOn
         public int CrowdSampleRate;
         public int SongVersion = 1;
         public int MuteVol = -96;
-        public int VocalMuteVol = -12;
+        public int VocalMuteVol = -96;
         public int animTempo = 32;
         
         private static Color mMenuHighlight = Color.FromArgb(135, 0, 0);
@@ -1250,7 +1250,7 @@ namespace MagmaRokOn
 
             numericTuningCents.Value = 0;
             numericMuteVol.Value = -96;
-            numericVocalMute.Value = -12;
+            numericVocalMute.Value = -96;
 
             PackageDisplay = "";
             txtTitleDisplay.Text = PackageDisplay;
@@ -4258,43 +4258,43 @@ namespace MagmaRokOn
                    ProBassDiff = 1;
                    break;
                case "PictureProBassDifficulty2":
-                   ProBassDiff = 150;
+                   ProBassDiff = 131;
                    break;
                case "PictureProBassDifficulty3":
-                   ProBassDiff = 208;
+                   ProBassDiff = 171;
                    break;
                case "PictureProBassDifficulty4":
-                   ProBassDiff = 267;
+                   ProBassDiff = 211;
                    break;
                case "PictureProBassDifficulty5":
-                   ProBassDiff = 325;
+                   ProBassDiff = 271;
                    break;
                case "PictureProBassDifficulty6":
-                   ProBassDiff = 384;
+                   ProBassDiff = 341;
                    break;
                case "PictureProBassDifficulty7":
-                   ProBassDiff = 442;
+                   ProBassDiff = 401;
                    break;
                case "PictureProGuitarDifficulty1":
                    ProGuitarDiff = 1;
                    break;
                case "PictureProGuitarDifficulty2":
-                   ProGuitarDiff = 150;
+                   ProGuitarDiff = 131;
                    break;
                case "PictureProGuitarDifficulty3":
-                   ProGuitarDiff = 208;
+                   ProGuitarDiff = 171;
                    break;
                case "PictureProGuitarDifficulty4":
-                   ProGuitarDiff = 267;
+                   ProGuitarDiff = 211;
                    break;
                case "PictureProGuitarDifficulty5":
-                   ProGuitarDiff = 325;
+                   ProGuitarDiff = 271;
                    break;
                case "PictureProGuitarDifficulty6":
-                   ProGuitarDiff = 384;
+                   ProGuitarDiff = 341;
                    break;
                case "PictureProGuitarDifficulty7":
-                   ProGuitarDiff = 442;
+                   ProGuitarDiff = 401;
                    break;
            }
            
@@ -9305,17 +9305,17 @@ namespace MagmaRokOn
                         case 1:
                             return 1;
                         case 2:
-                            return 124;
+                            return 131;
                         case 3:
-                            return 151;
+                            return 171;
                         case 4:
-                            return 178;
+                            return 211;
                         case 5:
-                            return 242;
+                            return 271;
                         case 6:
-                            return 345;
+                            return 341;
                         case 7:
-                            return 448;
+                            return 401;
                     }
                     break;
                 case "Bass":
@@ -9324,17 +9324,17 @@ namespace MagmaRokOn
                         case 1:
                             return 1;
                         case 2:
-                            return 135;
+                            return 131;
                         case 3:
-                            return 181;
+                            return 171;
                         case 4:
-                            return 228;
+                            return 211;
                         case 5:
-                            return 293;
+                            return 271;
                         case 6:
-                            return 364;
+                            return 341;
                         case 7:
-                            return 436;
+                            return 401;
                     }
                     break;
                 case "ProBass":
@@ -9343,17 +9343,17 @@ namespace MagmaRokOn
                         case 1:
                             return 1;
                         case 2:
-                            return 150;
+                            return 131;
                         case 3:
-                            return 208;
+                            return 171;
                         case 4:
-                            return 267;
+                            return 211;
                         case 5:
-                            return 325;
+                            return 271;
                         case 6:
-                            return 384;
+                            return 341;
                         case 7:
-                            return 442;
+                            return 401;
                     }
                     break;
                 case "Guitar":
@@ -9362,17 +9362,17 @@ namespace MagmaRokOn
                         case 1:
                             return 1;
                         case 2:
-                            return 139;
+                            return 131;
                         case 3:
-                            return 176;
+                            return 171;
                         case 4:
-                            return 221;
+                            return 211;
                         case 5:
-                            return 267;
+                            return 271;
                         case 6:
-                            return 333;
+                            return 341;
                         case 7:
-                            return 409;
+                            return 401;
                     }
                     break;
                 case "ProGuitar":
@@ -9381,17 +9381,17 @@ namespace MagmaRokOn
                         case 1:
                             return 1;
                         case 2:
-                            return 150;
+                            return 131;
                         case 3:
-                            return 208;
+                            return 171;
                         case 4:
-                            return 267;
+                            return 211;
                         case 5:
-                            return 325;
+                            return 271;
                         case 6:
-                            return 384;
+                            return 341;
                         case 7:
-                            return 442;
+                            return 401;
                     }
                     break;
                 case "Keys":
@@ -9400,17 +9400,17 @@ namespace MagmaRokOn
                         case 1:
                             return 1;
                         case 2:
-                            return 153;
+                            return 131;
                         case 3:
-                            return 211;
+                            return 171;
                         case 4:
-                            return 269;
+                            return 211;
                         case 5:
-                            return 327;
+                            return 271;
                         case 6:
-                            return 385;
+                            return 341;
                         case 7:
-                            return 443;
+                            return 401;
                     }
                     break;
                 case "ProKeys":
@@ -9419,17 +9419,17 @@ namespace MagmaRokOn
                         case 1:
                             return 1;
                         case 2:
-                            return 153;
+                            return 131;
                         case 3:
-                            return 211;
+                            return 171;
                         case 4:
-                            return 269;
+                            return 211;
                         case 5:
-                            return 327;
+                            return 271;
                         case 6:
-                            return 385;
+                            return 341;
                         case 7:
-                            return 443;
+                            return 401;
                     }
                     break;
                 case "Vocal":
@@ -9438,17 +9438,17 @@ namespace MagmaRokOn
                         case 1:
                             return 1;
                         case 2:
-                            return 132;
+                            return 131;
                         case 3:
-                            return 175;
+                            return 171;
                         case 4:
-                            return 218;
+                            return 211;
                         case 5:
-                            return 279;
+                            return 271;
                         case 6:
-                            return 353;
+                            return 341;
                         case 7:
-                            return 427;
+                            return 401;
                     }
                     break;
                 case "Band":
@@ -9457,17 +9457,17 @@ namespace MagmaRokOn
                         case 1:
                             return 1;
                         case 2:
-                            return 165;
+                            return 131;
                         case 3:
-                            return 215;
+                            return 171;
                         case 4:
-                            return 243;
+                            return 211;
                         case 5:
-                            return 267;
+                            return 271;
                         case 6:
-                            return 292;
+                            return 341;
                         case 7:
-                            return 345;
+                            return 401;
                     }
                     break;
                 default:
