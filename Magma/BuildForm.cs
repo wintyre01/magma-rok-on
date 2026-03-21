@@ -620,7 +620,7 @@ namespace MagmaRokOn
                         {
                             songid = songid + "v" + mMainForm.SongVersion;
                         }
-
+                        var newid2x = new SongIDCorrector();
                         // patch 'song' in the second line to be '<basename>'
                         line = srSongsRaw.ReadLine();
                         if (line != null && line.Contains("'song'"))
@@ -689,8 +689,14 @@ namespace MagmaRokOn
                                 line = "";
                             }                            
                             else if (line.Contains("('song_id' 0)"))
-                            {                                
-                                line = "   ('song_id' " + (mMainForm.useNumericID ? UniqueID : songid) + ")";
+                            {
+                                //This is a check to generate it again based on the new shortname (2x)
+                                if ((mMainForm.is2XMIDI && doing2X) || (!mMainForm.is2XMIDI && mMainForm.is2xBassPedal))
+                                { 
+                                    line = "   ('song_id' " + newid2x.ShortnameToSongID(songid) + ")";
+                                }
+                                else
+                                    line = "   ('song_id' " + (mMainForm.useNumericID ? UniqueID.ToString() : songid) + ")";
                                 if (!string.IsNullOrEmpty(mMainForm.InstrumentSolos))
                                 {
                                     swSongsDta.WriteLine(line);
@@ -1504,22 +1510,7 @@ namespace MagmaRokOn
         private void BuildForm_Shown(object sender, EventArgs e)
         {
             switch (mMainForm.ActiveSkin)
-            {
-                case "fire":
-                    btnClipboard.BackgroundImage = Resources.btn_xlarge_lava;
-                    btnVisualize.BackgroundImage = Resources.btn_xlarge_lava;
-                    btnNautilus.BackgroundImage = Resources.btn_xlarge_lava;
-                    ButtonClose.BackgroundImage = Resources.btn_large_lava;
-                    break;
-               case "colorful":
-                    SkinDefaults();
-                    SkinButtonStyles(FlatStyle.Flat);
-                    SkinButtonText(Color.White);
-                    btnClipboard.BackColor = Color.FromArgb(27, 178, 37);
-                    btnVisualize.BackColor = Color.FromArgb(196, 33, 34);
-                    btnNautilus.BackColor = Color.FromArgb(230, 216, 0);
-                    ButtonClose.BackColor = Color.FromArgb(39, 85, 196);
-                    break;
+            {                
                case "custom":
                     SkinDefaults();
                     SkinButtonStyles(mMainForm.SkinButtonStyle);

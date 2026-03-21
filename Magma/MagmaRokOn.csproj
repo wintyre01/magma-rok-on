@@ -58,13 +58,13 @@
     <StartupObject>MagmaRokOn.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>magma_icon.ico</ApplicationIcon>
+    <ApplicationIcon>magma_icon2.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>B10A0D36B9A33B76FFEB72D33B142FE5D5E0A0C8</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>CC3970D5CDAD632005A999530295F98AC5F31322</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>MagmaC3_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>MagmaRokOn_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -376,7 +376,10 @@
     <None Include="Resources\loading-blue1.gif" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="magma_icon.ico" />
+    <Content Include="magma_icon2.ico" />
+    <None Include="bin\Debug\res\default.bmp" />
+    <None Include="bin\Debug\res\todo_header.png" />
+    <None Include="bin\Debug\res\magma_logo.png" />
     <None Include="Resources\btn_xlarge_lava.png" />
     <None Include="Resources\btn_small_lava.png" />
     <None Include="Resources\btn_large_lava.png" />
@@ -384,9 +387,7 @@
     <None Include="Resources\todo_onfire.png" />
     <None Include="Resources\magma_fire.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="bin\Debug\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

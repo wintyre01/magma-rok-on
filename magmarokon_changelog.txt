@@ -1,11 +1,49 @@
 Magma: Rok On Edition v4
 Developed by Harmonix Music Systems
-Modified by TrojanNemo 2013-2015, FujiSkunk 2019-2024, TrojanNemo 2025-Present
+Modified by TrojanNemo 2013-2015, FujiSkunk 2019-2024, TrojanNemo 2025-2026
 (with contributions from many!)
 
 -------------------
 
 FEATURES / CHANGE LOG:
+
+v4.1.0
+
+MAJOR reskinning - gets rid of all AI images since that apparently was killing the environment and hurting some users - thanks to StackOverflow0x for contributing his "Clean Light" skin that is now the new Magma default - all others were deleted and are not coming back - custom skins are still enabled if you want to make your own - just make sure not to use AI images!
+NEW icon and default album art - created by Yours Truly in Photoshop - enjoy
+MERGED PR by Aloquendiar - this fixes errors with versions created using the 2x bass pedal mode (duplicate IDs), and also fixes _rb3con discrepancies - thanks!!!
+FIXED creation of BMP album art file that would work on Windows but would not work on Linux/Wine - now should work in both without Magma throwing an error about the album art being invalid
+FIXED apparently longstanding bug with audio quality selection that was only noticeable if you were messing with the accompanying .rok files - changed it to a dropbox and fixed behavior now - thanks to Roger for bringing it up
+FIXED automatic separating of stems from mogg file that was apparently broken but nobody had reported it - should work as intended now when importing CON files
+FIXED issue raised by GucciGuwop420 on GitHub where importing a CON/DTA file it would default to 0 value for drums
+FIXED bug where difficulty was saving correctly but upon loading was displaying one bubble less than actual - thanks to jphn for pointing it out
+FIXED issue of animation speed not saving correctly
+REMOVED custom animation speeds that were reported to not be accepted by the game
+
+----------
+
+v4.0.3
+
+FIXED tonality always saving as -1 instead of the proper value
+FIXED enabling/disabling tonality not activating the "need to save changes" marker
+FIXED tonality checkbox label not changing with skin changes
+FIXED Band Fail SFX label not changing with skin changes
+FIXED most of the difficulty bubbles not having the correct cursor
+FIXED behavior when importing a CON file, it would put the right difficulty bubbles but not the right difficulty value in the slider
+FIXED wonky behavior with preview start and end times, now only checks for validity of values when compiling
+FIXED behavior when starting a new project would not clear the preview end values
+FIXED preview end labels not changing with skin changes
+FIXED audio preview not working since introduction of the preview end value
+FIXED "Use unique numeric ID" option toggle not saving across instances
+FIXED Band Fail SFX value not saving or loading from the .rok project file
+FIXED behavior for tonic note and tonality to make more sense
+FIXED custom skins not staying selected due to broken option loading code
+
+ADDED feature so now instrument difficulty pips update automatically as you change the difficulty value in the slider
+ADDED flat equivalents for sharps in the tonic note dropdown as requested by ataeaf
+ADDED updated ark file thanks to Linos that should allow MagmaCompiler to pass through a chart with YARG's new range shift indicators
+
+----------
 
 v4.0.2
 CHANGES
