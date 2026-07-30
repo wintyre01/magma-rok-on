@@ -5,11 +5,11 @@ Required runtime binaries are distributed separately via GitHub Releases.
 
 ## Prerequisites
 - Windows 10/11
-- Visual Studio 2022
+- Visual Studio 2022 or newer
 - .NET Desktop Development workload installed
 
 ## Step 1: Clone the Source
-git clone https://github.com/trojannemo/magma-rok-on.git
+git clone https://github.com/NemosNautilus/magma-rok-on.git
 or download ZIP from GitHub.
 
 ## Step 2: Download Runtime Binaries
