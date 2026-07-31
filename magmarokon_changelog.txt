@@ -1,6 +1,6 @@
 Magma: Rok On Edition v4
 Developed by Harmonix Music Systems
-Modified by TrojanNemo 2013-2015, FujiSkunk 2019-2024, TrojanNemo 2025-2026
+Modified by Nemo 2013-2015, FujiSkunk 2019-2024, Nemo 2025-2026
 (with contributions from many!)
 
 -------------------
@@ -71,7 +71,7 @@ NEW FEATURES
 
 v4.0.0
 
-C3 forums and website are gone, but the spirit of music rocks on...with the change in maintainer back to TrojanNemo after 10 years (thanks so much FujiSkunk!), it's time for a name and UI change. So here comes Magma: Rok On Edition!
+C3 forums and website are gone, but the spirit of music rocks on...with the change in maintainer back to Nemo after 10 years (thanks so much FujiSkunk!), it's time for a name and UI change. So here comes Magma: Rok On Edition!
 
 CHANGES
 - New icon!
@@ -127,7 +127,7 @@ FIXES
 
 v3.3.3
 NEWS
-- New maintainer: FujiSkunk!  Many thanks to TrojanNemo for creating and maintaining Magma C3 up through v3.3.2.
+- New maintainer: FujiSkunk!  Many thanks to Nemo for creating and maintaining Magma C3 up through v3.3.2.
 - Technical update only - no new features and only very minor non-technical bug fixes - no update necessary for existing users
 
 FIXES
@@ -557,7 +557,7 @@ v1.3.0
 - Added option to right-click and select a variety of silence tracks for each instrument (in case the default setting is not what you want)
 - Added option to right-click and choose to clear the file path for the audio stems
 - Added option to save the current author as the "Default Author" - just click on the checkmark that shows up next to the Author field. From there on, every time you create a new project this will be the default author, until you change it again
-- Added option to override the author in the project file with the Default Author - this is helpful if you have a bunch of past projects that you're fixing and they had a different name than what you're using now (i.e. Nemo vs TrojanNemo)
+- Added option to override the author in the project file with the Default Author - this is helpful if you have a bunch of past projects that you're fixing and they had a different name than what you're using now
 - Greatly improved the 'Import CON / LIVE file' function code to work much more accurately and better preserve the information
 - 'Import CON / LIVE file' function now saves the Content Image from the imported CON - this is very helpful if it had a custom image (i.e. Beatles, etc)
 - Can now drag and drop a CON / LIVE file straight into Magma
@@ -721,7 +721,7 @@ ACKNOWLEDGEMENTS
 
 Harmonix - for creating all the tools that make the RBN and customs possible. We are using Version 2.0.101.0, Build 110411_A of Harmonix's Magma as our base.
 
-TrojanNemo - lead programmer for Magma: C3 Roks Edition
+Nemo - lead programmer for Magma: C3 Roks Edition
 
 emist - for all the assembly-language hacking done to MagmaCompiler.exe, without which almost nothing else done would have mattered. Check out his programming / reverse engineering blog at http://eryanbot.com/jtp/
 
